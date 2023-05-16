@@ -1,10 +1,26 @@
-
 import './App.css';
-import Hola from './pages/admin';
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import PaginaAdmin from "./pages/adminPacientes"
+import AgregarPaciente from './pages/agregarPacientes';
+import EditarPaciente from './pages/editarPacientes';
+import ProductoAdmin from './pages/adminProducto';
+import AgregarProductos from './pages/agregarProducto';
+
 
 function App() {
   return (
     <>
+    <BrowserRouter>
+    <Routes>
+    <Route path='/Admin' element={<PaginaAdmin/>} ></Route>
+    <Route path='/agregarPaciente' element={<AgregarPaciente/>} ></Route>
+    <Route path='/editarPaciente/:_id' element={<EditarPaciente/>} ></Route>
+    <Route path='/AdminProducto' element={<ProductoAdmin/>} ></Route>
+    <Route path='/agregarProducto' element={<AgregarProductos/>} ></Route>
+
+
+    </Routes>
+    </BrowserRouter>
     
    
    </>
