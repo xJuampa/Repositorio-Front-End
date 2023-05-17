@@ -1,28 +1,44 @@
-
 import { Link } from "react-router-dom";
+import {
+  IoIosContacts,
+  IoIosCalendar,
+  IoIosCart,
+  IoMdHelp,
+  IoIosPaper,
+} from "react-icons/io";
 
-
-function NavegacionLateral(){
-    return(
+function NavegacionLateral() {
+  return (
+    <div>
+      <div className="contenedorLateral">
         <div>
-            <div className="contenedorLateral">
-            <Link to={`/Admin`}  className="btn">
-            Pacientes
+          <Link to={`/Admin`} className="btn">
+            <IoIosContacts /> Pacientes
           </Link>
-          <Link to={`/Admin`}  className="btn">
+        </div>
+        <div>
+          <Link to={`/Admin`} className="btn turnos">
+            <IoIosCalendar />
             Turnos
           </Link>
-          <Link to={`/AdminProducto`}  className="btn">
-            Productos
-          </Link>
-          <Link to={`/Admin`}  className="btn">
-             Consultas
-          </Link>
-          <Link to={`/Admin`}  className="btn">
-            Planes
-          </Link>
-            </div>
         </div>
-      )
+        <div>
+          <Link to={`/AdminProducto`} className="btn">
+            <IoIosCart /> Productos
+          </Link>
+        </div>
+        <div>
+          <Link to={`/Admin`} className="btn">
+            <IoMdHelp /> Consultas
+          </Link>
+        </div>
+        <div>
+          <Link to={`/Admin`} className="btn planes">
+            <IoIosPaper /> Planes
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default NavegacionLateral
+export default NavegacionLateral;

@@ -14,11 +14,22 @@
 .contenedorLateral{
   display: flex;
   flex-direction: column;
-  background-color: blue;
+  background-color: rgb(255, 187, 0);
   height: 100vh;
+  width: 75%;
   padding: 30px;
   margin-right: 10%;
-  
+}
+.contenedorLateral .planes{
+  margin-left: 10px;
+}
+.contenedorLateral .turnos{
+  margin-left: 10px;
+}
+.contenedorLateral .btn{
+color: white;
+align-items: center;
+margin-right:10px ;
 }
 .ContenedorAdmin{
   display: flex;
