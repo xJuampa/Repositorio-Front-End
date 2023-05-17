@@ -5,6 +5,7 @@ import AgregarPaciente from './pages/agregarPacientes';
 import EditarPaciente from './pages/editarPacientes';
 import ProductoAdmin from './pages/adminProducto';
 import AgregarProductos from './pages/agregarProducto';
+import EditarProducto from './pages/editarProductos';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Route path='/editarPaciente/:_id' element={<EditarPaciente/>} ></Route>
     <Route path='/AdminProducto' element={<ProductoAdmin/>} ></Route>
     <Route path='/agregarProducto' element={<AgregarProductos/>} ></Route>
+    <Route path='/editarProducto/:_id' element={<EditarProducto/>} ></Route>
 
 
     </Routes>
