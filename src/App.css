@@ -1,11 +1,59 @@
 
-.colorNav{
-  color: white;
-  font-size: larger;
-  font-weight: 600;
-  text-decoration: none;
-  margin-left: 10px;
+
+  /*------------------------------------NAVBAR---------------------------------------------------------------------*/
+  *{
+    margin: 0%;
+    padding: 0%;
   }
+  .background{
+    background-image: url(./imagenes/background.png);
+    height: 100vh;
+    margin-top: -66px;
+    background-size: cover;
+  }
+  .Navbar{
+    background-color:transparent;
+    position: sticky;
+    } 
+  .nombreNav{
+    color: orange;
+    font-style: normal;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .nombreNav:hover{
+    color: rgb(255, 255, 255);
+  }
+  
+  .nombreNav span{
+    color: rgb(255, 255, 255);
+  }
+  .nombreNav span:hover{
+    color: orange;
+  }
+  /*-----------------------------------------------FOOTER---------------------------------------------------------------------*/
+  .redesf{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .redesf a{
+    color: orange;
+    height: 50px;
+    width: 50px;
+    font-size: xx-large;
+  }
+  .redesf a:hover{
+    color: white;
+  }
+  .logoF{
+    height: 120px;
+    width: 150px;
+  
+  }
+  
 /* ------------------------------------------------------CSS ADMIN PACIENTES ------------------------------------- */
   .orientacionNav{
     display: flex;
