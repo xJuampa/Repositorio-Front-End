@@ -33,7 +33,7 @@ function NavegacionLateral() {
           </Link>
         </div>
         <div>
-          <Link to={`/Admin`} className="btn planes">
+          <Link to={`/adminPlanes`} className="btn planes">
             <IoIosPaper /> Planes
           </Link>
         </div>

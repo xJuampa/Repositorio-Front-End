@@ -6,7 +6,7 @@ import EditarPaciente from './pages/editarPacientes';
 import ProductoAdmin from './pages/adminProducto';
 import AgregarProductos from './pages/agregarProducto';
 import EditarProducto from './pages/editarProductos';
-
+import AdminPlanes from './pages/adminPlanes';
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
     <Route path='/AdminProducto' element={<ProductoAdmin/>} ></Route>
     <Route path='/agregarProducto' element={<AgregarProductos/>} ></Route>
     <Route path='/editarProducto/:_id' element={<EditarProducto/>} ></Route>
+    <Route path='/adminPlanes' element={<AdminPlanes/>} ></Route>
 
 
     </Routes>
