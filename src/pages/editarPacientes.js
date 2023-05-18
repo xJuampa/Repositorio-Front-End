@@ -94,7 +94,9 @@ function EditarPaciente(){
 
     return(
         <>
-        <Form className="container" onSubmit={handleSubmit}>
+        <div className="divGeneral">
+      <div className="divForms">
+          <Form className="container" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre del Paciente</Form.Label>
           <Form.Control type="text" placeholder="Nombre del Paciente" defaultValue={paramsPacientes.nombrePaciente} ref={NombrePacienteRef} />
@@ -139,6 +141,10 @@ function EditarPaciente(){
           Enviar
         </Button>
       </Form>
+
+          </div>
+        </div>
+        
         </>
       
         

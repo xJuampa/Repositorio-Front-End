@@ -79,6 +79,8 @@ function AgregarPaciente() {
 
   return (
     <>
+    <div className="divGeneral">
+      <div className="divForms">
       <Form onSubmit={handleSubmit} className="container">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre del Paciente</Form.Label>
@@ -124,6 +126,10 @@ function AgregarPaciente() {
           Enviar
         </Button>
       </Form>
+
+      </div>
+    </div>
+      
     </>
   );
 }

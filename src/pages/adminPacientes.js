@@ -34,8 +34,8 @@ function PaginaAdmin() {
     <div className="moverBarraLateral" >
       <NavegacionLateral />
     </div>
-    <div className="moverListaPacientes">
-    <div >
+    <div className="moverLista">
+    <div className="Listado" >
     <Link
     to="/agregarPaciente"
     className="btn btn-success d-flex m-5 justify-content-center"

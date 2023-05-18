@@ -37,8 +37,8 @@ function ProductoAdmin (){
         <div className="moverBarraLateral" >
           <NavegacionLateral />
         </div>
-        <div className="moverListaPacientes">
-        <div >
+        <div className="moverLista">
+        <div className="Listado">
         <Link
         to="/agregarProducto"
         className="btn btn-success d-flex m-5 justify-content-center"

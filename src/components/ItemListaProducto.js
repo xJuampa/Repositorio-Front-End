@@ -50,7 +50,7 @@ function ItemListaProducto ({items, consultaApiProductos}){
         <td>{items.nombreProducto}</td>
         <td>{items.precioProducto}</td>
         <td>{items.marcaProducto}</td>
-        <Link to={`/editarProducto/${items._id}`}  className="btn btn-warning me-3">
+        <Link to={`/editarProducto/${items._id}`}  className="btn warning me-3">
             Editar
           </Link>
           <Link className="btn btn-danger" onClick={() => eliminarObjetos()} >

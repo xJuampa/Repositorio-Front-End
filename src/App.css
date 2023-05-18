@@ -34,6 +34,19 @@ margin-right:10px ;
 .ContenedorAdmin{
   display: flex;
 }
+.Listado{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  
+}
+.moverLista{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  
+}
 
 /* -------------------------------------- CSS ADMIN PRODUCTO------------------------------------------- */
 
@@ -41,3 +54,16 @@ margin-right:10px ;
   width: 70px;
 }
 
+/* ------------------------------------- Formularios Pacientes y Prod---------------------------------*/
+
+.divForms{
+  background-color: rgb(168, 166, 166);
+  width: 70%;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.divGeneral{
+  display: flex;
+  justify-content: center;
+}
