@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 function EditarProducto (){
     const { _id } = useParams();
     const [paramsProductos, setParamsProductos] = useState({});
-    const URL = "http://localhost:4003/admProductos/"+_id;  
+    const URL = "http://localhost:4009/admProductos/"+_id;  
     const NombreProductoRef = useRef("");
     const ImgProductoRef = useRef("");
     const PrecioProductoRef = useRef(0);

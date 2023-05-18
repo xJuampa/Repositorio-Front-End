@@ -6,6 +6,7 @@
     padding: 0%;
   }
   .background{
+    display: flex;
     background-image: url(./imagenes/background.png);
     height: 100vh;
     margin-top: -66px;
@@ -81,6 +82,7 @@ margin-right:10px ;
 }
 .ContenedorAdmin{
   display: flex;
+
 }
 .Listado{
   display: flex;
@@ -94,6 +96,10 @@ margin-right:10px ;
   justify-content: center;
 
   
+}
+.ColorFondoAdm{
+  background-color: orangered;
+
 }
 
 /* -------------------------------------- CSS ADMIN PRODUCTO------------------------------------------- */

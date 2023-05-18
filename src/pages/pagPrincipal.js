@@ -8,9 +8,9 @@ function PagPrincipal(){
     return(
         <>
          
-        <NavBar/>
+        
         <div className="background"></div>
-        <Footer/>
+        
 
 
         </>

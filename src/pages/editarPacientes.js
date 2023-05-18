@@ -10,7 +10,7 @@ function EditarPaciente(){
   const { _id } = useParams();
   const [paramsPacientes, setParamsPacientes] = useState({});
   const [paramsMascotasCat, setParamsMascotasCat] = useState("");
-  const URL = "http://localhost:4003/admPacientes/"+_id;  
+  const URL = "http://localhost:4009/admPacientes/"+_id;  
   const NombrePacienteRef = useRef("");
   const ApellidoPacienteRef = useRef("");
   const EmailPacienteRef = useRef("");

@@ -28,7 +28,7 @@ function NavegacionLateral() {
           </Link>
         </div>
         <div>
-          <Link to={`/Admin`} className="btn">
+          <Link to={`/adminPlanes`} className="btn">
             <IoMdHelp /> Consultas
           </Link>
         </div>

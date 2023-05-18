@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemListaProducto from "../components/ItemListaProducto";
 import NavegacionLateral from "../components/NavLateral";
+import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
 
 function ProductoAdmin (){
     const [listaProductos, setListaProductos] = useState([]);
-    const URL = "http://localhost:4003/admProductos/" ;
+    const URL = "http://localhost:4009/admProductos/" ;
 
     useEffect(() => {
         consultaApiProductos();
@@ -33,6 +35,8 @@ function ProductoAdmin (){
 
     return(
         <>
+        <div className="ColorFondoAdm"> 
+
         <div className="ContenedorAdmin ">
         <div className="moverBarraLateral" >
           <NavegacionLateral />
@@ -70,9 +74,9 @@ function ProductoAdmin (){
         </div>
         
         </div>
-    
+
         
-        
+    </div>
       </>
     )
 }
