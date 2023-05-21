@@ -9,7 +9,7 @@ import Footer from "../components/Footer"
 
 function ProductoAdmin (){
     const [listaProductos, setListaProductos] = useState([]);
-    const URL = "http://localhost:4009/admProductos/" ;
+    const URL = "http://localhost:4003/admProductos/" ;
 
     useEffect(() => {
         consultaApiProductos();

@@ -11,6 +11,11 @@ import PagPrincipal from './pages/pagPrincipal';
 import Consulta from './pages/agregarConsulta';
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
+import AdminComentarios from './pages/adminComentarios';
+import Comentario from './pages/agregarComentario';
+import AdminDetallesPlanes from './pages/adminDetallesPlanes';
+import AgregarPlan from './pages/agregarPlan';
+import EditarPlan from './pages/editarPlan';
 
 
 function App() {
@@ -28,6 +33,11 @@ function App() {
     <Route path='/editarProducto/:_id' element={<EditarProducto/>} ></Route>
     <Route path='/adminPlanes' element={<AdminPlanes/>} ></Route>
     <Route path='/agregarConsulta' element={<Consulta/>} ></Route>
+    <Route path='/adminComentarios' element={<AdminComentarios/>} ></Route>
+    <Route path='/agregarComentario' element={<Comentario/>} ></Route>
+    <Route path='/adminDetallesPlanes' element={<AdminDetallesPlanes/>} ></Route>
+    <Route path='/agregarPlan' element={<AgregarPlan/>} ></Route>
+    <Route path='/editarPlan/:_id' element={<EditarPlan/>} ></Route>
 
 
     </Routes>

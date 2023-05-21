@@ -7,29 +7,31 @@ import Swal from "sweetalert2";
 import {useNavigate } from "react-router-dom";
 
 
-function Consulta(){
-const [nombreCliente,setNombreCliente]= useState("")
-const [MailCliente,setMailCliente]= useState("")
-const [telefonoCliente,setTelefonoCliente]= useState(0)
-const [Descripcion,setDescripcion]= useState("")
+function Comentario(){
+const [nombreComentario,setNombreComentario]= useState("")
+const [emailComentario,setEmailComentario]= useState("")
+const [telefonoComentario,setTelefonoComentario]= useState(0)
+const [descripcionComentario,setDescripcionComentario]= useState("")
+const [estadoComentario,setEstadoComentario]= useState(false)
 const [error, setError] = useState(false);
 const navegacion = useNavigate()
 
 const handleSubmit = async (e) => {
     e.preventDefault();
-    const URL = "http://localhost:4003/admConsulta/";
+    const URL = "http://localhost:4003/admComentarios/";
 
     if (
-      largoInput(nombreCliente) &&
-      largoInput(MailCliente) &&
-      largoInput(Descripcion) 
+      largoInput(nombreComentario) &&
+      largoInput(emailComentario) &&
+      largoInput(descripcionComentario) 
       
     ) {
-      const nuevaConsulta = {
-        nombreCliente,
-        MailCliente,
-        telefonoCliente,
-        Descripcion
+      const nuevoComentario = {
+        nombreComentario,
+        emailComentario,
+        telefonoComentario,
+        descripcionComentario,
+        estadoComentario
       };
 
       try {
@@ -38,7 +40,7 @@ const handleSubmit = async (e) => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(nuevaConsulta),
+          body: JSON.stringify(nuevoComentario),
         };
         const respuesta = await fetch(URL, options);
 
@@ -80,7 +82,7 @@ const handleSubmit = async (e) => {
               <Form.Control
                 type="text"
                 placeholder=""
-                onChange={(e) => setNombreCliente(e.target.value)}
+                onChange={(e) => setNombreComentario(e.target.value)}
                 
               />
               </Form.Group>
@@ -89,24 +91,24 @@ const handleSubmit = async (e) => {
               <Form.Control
                 type="text"
                 placeholder="ejemplo@ejemplo.com"
-                onChange={(e) => setMailCliente(e.target.value)}
+                onChange={(e) => setEmailComentario(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Telefono de contacto</Form.Label>
+              <Form.Label>Telefono </Form.Label>
               <Form.Control
                 type="namber"
                 placeholder="+54 0381 "
-                onChange={(e) => setTelefonoCliente(e.target.value)}
+                onChange={(e) => setTelefonoComentario(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Escriba aqui su consulta</Form.Label>
+              <Form.Label>Escriba aqui su comentario</Form.Label>
               <Form.Control
                 as="textarea"
                  rows={3}
                 placeholder="Escriba aqui su consulta"
-                onChange={(e) => setDescripcion(e.target.value)}
+                onChange={(e) => setDescripcionComentario(e.target.value)}
               />
             </Form.Group>
 
@@ -128,4 +130,4 @@ const handleSubmit = async (e) => {
     )
 }
 
-export default Consulta
+export default Comentario

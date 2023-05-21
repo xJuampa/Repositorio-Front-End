@@ -17,7 +17,7 @@ function AgregarPaciente() {
 
   const handleSubmit= async(e)=>{
     e.preventDefault();
-    const URL = "http://localhost:4009/admPacientes/";
+    const URL = "http://localhost:4003/admPacientes/";
 
     if (
       largoInput(nombrePaciente) &&

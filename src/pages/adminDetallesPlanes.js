@@ -2,20 +2,18 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import ItemListaPlanes from "../components/ItemListaPlanes";
+import ItemListaDetallesPlanes from "../components/itemsDetallesPlanes";
 import NavegacionLateral from "../components/NavLateral";
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
 
-function AdminPlanes() {
-  const [listaPlanes, setListaPlanes] = useState([])
-  const URL = "http://localhost:4003/admConsulta/";
+function AdminDetallesPlanes(){
+    const [listaDetallesPlanes , setListaDetallesPlanes ] = useState([])
+  const URL = "http://localhost:4003/admPlanes/";
 
   useEffect(() => {
-    consultaApiPlanes();
+    consultaApiDetallesPlanes ();
   }, []);
 
-  const consultaApiPlanes = async () => {
+  const consultaApiDetallesPlanes  = async () => {
     try {
       const respuesta = await fetch(URL, {
         method: "GET",
@@ -24,15 +22,13 @@ function AdminPlanes() {
         },
       });
       const dato = await respuesta.json();
-      setListaPlanes(dato);
+      setListaDetallesPlanes (dato);
     } catch (error) {
       console.log(error);
     }
   };
-  
-
-  return (
-    <>
+    return(
+        <>
     <div className="ColorFondoAdm"> 
    
     <div className="ContenedorAdmin ">
@@ -41,20 +37,25 @@ function AdminPlanes() {
     </div>
     <div className="moverLista">
     <div className="Listado" >
-    
+    <Link
+        to="/agregarPlan"
+        className="btn btn-success d-flex m-5 justify-content-center"
+      >
+        Agregar Plan
+      </Link>
   <Table responsive>
       
       <thead>
         <tr>
-          <th >Nombre Cliente</th>
-          <th>Email</th>
-          <th>Telefono</th>
-          <th >Descripcion</th>
+        <th>Imagen</th>
+          <th >Titulo</th>
+          <th>Subtitulo</th>
+          <th>Precio</th>
         </tr>
       </thead>
-      {listaPlanes.map((items) => (
-        <ItemListaPlanes
-          consultaApiPlanes={consultaApiPlanes}
+      {listaDetallesPlanes.map((items) => (
+        <ItemListaDetallesPlanes
+          consultaApiDetallesPlanes={consultaApiDetallesPlanes}
           items={items}
           key={items._id}
         />
@@ -69,7 +70,7 @@ function AdminPlanes() {
 
     </div>
   </>
-  );
+    )
 }
 
-export default AdminPlanes;
+export default AdminDetallesPlanes 

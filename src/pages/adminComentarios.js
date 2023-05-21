@@ -2,20 +2,18 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import ItemListaPlanes from "../components/ItemListaPlanes";
+import ItemListaComentarios from "../components/itemListaComentarios";
 import NavegacionLateral from "../components/NavLateral";
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
 
-function AdminPlanes() {
-  const [listaPlanes, setListaPlanes] = useState([])
-  const URL = "http://localhost:4003/admConsulta/";
+function AdminComentarios(){
+    const [listaComentarios, setListaComentarios] = useState([])
+  const URL = "http://localhost:4003/admComentarios/";
 
   useEffect(() => {
-    consultaApiPlanes();
+    consultaApiComentarios();
   }, []);
 
-  const consultaApiPlanes = async () => {
+  const consultaApiComentarios = async () => {
     try {
       const respuesta = await fetch(URL, {
         method: "GET",
@@ -24,15 +22,13 @@ function AdminPlanes() {
         },
       });
       const dato = await respuesta.json();
-      setListaPlanes(dato);
+      setListaComentarios(dato);
     } catch (error) {
       console.log(error);
     }
   };
-  
-
-  return (
-    <>
+    return(
+        <>
     <div className="ColorFondoAdm"> 
    
     <div className="ContenedorAdmin ">
@@ -41,7 +37,6 @@ function AdminPlanes() {
     </div>
     <div className="moverLista">
     <div className="Listado" >
-    
   <Table responsive>
       
       <thead>
@@ -49,12 +44,12 @@ function AdminPlanes() {
           <th >Nombre Cliente</th>
           <th>Email</th>
           <th>Telefono</th>
-          <th >Descripcion</th>
+          <th >Comentario</th>
         </tr>
       </thead>
-      {listaPlanes.map((items) => (
-        <ItemListaPlanes
-          consultaApiPlanes={consultaApiPlanes}
+      {listaComentarios.map((items) => (
+        <ItemListaComentarios
+          consultaApiComentarios={consultaApiComentarios}
           items={items}
           key={items._id}
         />
@@ -69,7 +64,7 @@ function AdminPlanes() {
 
     </div>
   </>
-  );
+    )
 }
 
-export default AdminPlanes;
+export default AdminComentarios

@@ -16,7 +16,7 @@ function AgregarProductos(){
   
     const handleSubmit = async (e) => {
       e.preventDefault();
-      const URL = "http://localhost:4009/admProductos/";
+      const URL = "http://localhost:4003/admProductos/";
   
       if (
         largoInput(nombreProducto) &&

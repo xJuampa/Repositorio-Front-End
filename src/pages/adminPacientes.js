@@ -4,12 +4,11 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemLista from "../components/ItemLista";
 import NavegacionLateral from "../components/NavLateral";
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
+
 
 function PaginaAdmin() {
   const [listaPacientes, setListaPacintes] = useState([]);
-  const URL = "http://localhost:4009/admPacientes/";
+  const URL = "http://localhost:4003/admPacientes/";
 
   useEffect(() => {
     consultaApiPacientes();
