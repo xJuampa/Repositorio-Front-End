@@ -8,7 +8,7 @@ import logoblanco from '../imagenes/logoblanco.png';
 function ColorSchemesExample() {
   return (
     <>
-      <Navbar className='Navbar' variant="dark">
+      <Navbar className='Navbar'>
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -19,7 +19,7 @@ function ColorSchemesExample() {
               className="d-inline-block align-top"/>
               <a className='nombreNav' href='#home'><span>Rolling</span>Vet</a>
             </Navbar.Brand>
-          <Nav className="navLink">
+          <Nav className='NavLink'>
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#features">Nosotros</Nav.Link>
             <Nav.Link href="#pricing">Planes</Nav.Link>

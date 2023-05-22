@@ -5,6 +5,7 @@ import {
   IoIosCart,
   IoMdHelp,
   IoIosPaper,
+  IoMdChatbubbles
 } from "react-icons/io";
 
 function NavegacionLateral() {
@@ -17,7 +18,7 @@ function NavegacionLateral() {
           </Link>
         </div>
         <div>
-          <Link to={`/Admin`} className="btn turnos">
+          <Link to={`/Admin`} className="btn">
             <IoIosCalendar />
             Turnos
           </Link>
@@ -33,13 +34,13 @@ function NavegacionLateral() {
           </Link>
         </div>
         <div>
-          <Link to={`/adminDetallesPlanes`} className="btn planes">
+          <Link to={`/adminDetallesPlanes`} className="btn">
             <IoIosPaper /> Planes
           </Link>
         </div>
         <div>
-          <Link to={`/adminComentarios`} className="btn planes">
-            Comentarios
+          <Link to={`/adminComentarios`} className="btn">
+           <IoMdChatbubbles/> Comentarios
           </Link>
         </div>
       </div>

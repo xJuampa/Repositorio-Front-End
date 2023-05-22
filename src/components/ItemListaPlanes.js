@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import {IoMdTrash } from "react-icons/io";
 
 function ItemListaPlanes ({items,consultaApiPlanes}){
   const eliminarConsulta = () => {
@@ -49,8 +50,7 @@ function ItemListaPlanes ({items,consultaApiPlanes}){
         <td>{items.MailCliente}</td>
         <td>{items.telefonoCliente}</td>
         <td >{items.Descripcion}</td>
-          <Link className="btn btn-danger"  onClick={eliminarConsulta}>
-            Borrar
+          <Link className="btn btn-outline-danger"  onClick={eliminarConsulta}><IoMdTrash/>
           </Link>
       </tr>
       </tbody>

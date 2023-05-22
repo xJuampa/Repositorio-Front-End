@@ -36,8 +36,8 @@ function AdminComentarios(){
       <NavegacionLateral />
     </div>
     <div className="moverLista">
-    <div className="Listado" >
-  <Table responsive>
+    <div className="table-responsive Listado" >
+  <Table className="table table-striped">
       
       <thead>
         <tr>
@@ -45,6 +45,7 @@ function AdminComentarios(){
           <th>Email</th>
           <th>Telefono</th>
           <th >Comentario</th>
+          <th>Opciones</th>
         </tr>
       </thead>
       {listaComentarios.map((items) => (

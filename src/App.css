@@ -13,9 +13,9 @@
     background-size: cover;
   }
   .Navbar{
-    background-color:transparent;
+    background-color:rgb(41, 40, 40);
     position: sticky;
-    } 
+    }
   .nombreNav{
     color: orange;
     font-style: normal;
@@ -65,41 +65,55 @@
   flex-direction: column;
   background-color: rgb(255, 187, 0);
   height: 100vh;
-  width: 75%;
+  width: 80%;
   padding: 30px;
   margin-right: 10%;
-}
-.contenedorLateral .planes{
-  margin-left: 10px;
-}
-.contenedorLateral .turnos{
-  margin-left: 10px;
 }
 .contenedorLateral .btn{
 color: white;
 align-items: center;
 margin-right:10px ;
+display: flex;
+flex-direction: column;
+border: 0ch;
+margin-top: 20px;
+}
+Table{
+  border-spacing: 0;
+  width: 100%;
+  text-align: center;
+  flex-flow: nowrap;
+  flex-wrap: wrap;
+}
+Table th{
+text-align: center;
 }
 .ContenedorAdmin{
   display: flex;
 
 }
+.BotonEliminar{
+  background-color: red;
+  align-items: center;
+  display: flex;
+  border: 0ch;
+}
 .Listado{
   display: flex;
   flex-direction: column;
-  width: 80%;
-  
+  width: 85%;
+  height: 75%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 15px;
+  border-top: solid 7px rgb(41, 40, 40);
 }
 .moverLista{
   display: flex;
   width: 100%;
   justify-content: center;
-
-  
 }
 .ColorFondoAdm{
-  background-color: orangered;
-
+  background-color: white;
 }
 
 /* -------------------------------------- CSS ADMIN PRODUCTO------------------------------------------- */
