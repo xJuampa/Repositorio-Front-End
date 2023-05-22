@@ -36,3 +36,137 @@
     transform: rotate(360deg);
   }
 }
+
+/* Clima API */
+
+.weather-container {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #333;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.weather-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.weather-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.weather-description img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.weather-description p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.temperature p {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  animation: scale 0.5s ease-in-out;
+}
+
+.temperature p:last-child {
+  font-size: 18px;
+  color: #777;
+  animation: fade-in 1s ease-in-out;
+}
+
+.extra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #666;
+  animation: slide-up 1s ease-in-out;
+}
+
+.loading {
+  font-size: 18px;
+  font-style: italic;
+  color: #666;
+  animation: fade-in 1s ease-in-out infinite alternate;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .weather-container h2 {
+    font-size: 20px;
+  }
+
+  .weather-description img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+  }
+
+  .weather-description p {
+    font-size: 16px;
+  }
+
+  .temperature p {
+    font-size: 36px;
+  }
+
+  .temperature p:last-child {
+    font-size: 14px;
+  }
+
+  .extra-info {
+    font-size: 14px;
+  }
+}
