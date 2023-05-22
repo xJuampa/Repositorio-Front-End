@@ -27,7 +27,7 @@ function ColorSchemesExample() {
             </Navbar.Brand>
           <Nav className="navLink">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#features">Nosotros</Nav.Link>
+            <Nav.Link href="/acercaDeNosotros">Nosotros</Nav.Link>
             <Nav.Link href="#pricing">Planes</Nav.Link>
             <Nav.Link style={{ display: Token? 'block' : 'none' }}  href="/Admin">
               Admin

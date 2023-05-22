@@ -57,30 +57,24 @@ function PagPrincipal() {
           </div>
           <div className="container">
             <div className="row ">
-              <div className="col-lg-3 col-md-3 col-sm-10  estiloCards">
-                <img
-                  className="tamañoServicios"
-                  src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg"
-                  alt=""
-                />
-                <h4>Atencion medica</h4>
-              </div>
-              <div className="col-lg-3 col-md-3   estiloCards">
-                <img
-                  className="tamañoServicios"
-                  src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg"
-                  alt=""
-                />
-                <h4>Servicio de Peluqueria</h4>
-              </div>
-              <div className="col-lg-3 col-md-3   estiloCards">
-                <img
-                  className="tamañoServicios"
-                  src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg"
-                  alt=""
-                />
-                <h4>Pet-Shop</h4>
-              </div>
+            <div className="members-container col-lg-3 me-3 ">
+          <div className="member-card">
+            <img className="p-3" src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="Miembro 1" />
+            <h2 className="acomodarTitulos">Atencion Medica</h2>
+          </div>
+          </div>
+          <div className="members-container col-lg-3 m-3 ">
+          <div className="member-card ">
+            <img className="p-3" src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="Miembro 1" />
+            <h2 className="acomodarTitulos">Peluqueria</h2>
+          </div>
+          </div>
+          <div className="members-container col-lg-3 m-3">
+          <div className="member-card">
+            <img className="p-3" src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="Miembro 1" />
+            <h2 className="acomodarTitulos">Pet-Shop</h2>
+          </div>
+          </div>
             </div>
           </div>
         </div>
