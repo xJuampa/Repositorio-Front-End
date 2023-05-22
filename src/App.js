@@ -11,6 +11,9 @@ import PagPrincipal from './pages/pagPrincipal';
 import Consulta from './pages/agregarConsulta';
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
+import TurnoAdmin from './pages/adminTurnos';
+import AgregarTurno from './pages/agregarTurno';
+import EditarTurno from './pages/editarTurno';
 
 
 function App() {
@@ -28,6 +31,9 @@ function App() {
     <Route path='/editarProducto/:_id' element={<EditarProducto/>} ></Route>
     <Route path='/adminPlanes' element={<AdminPlanes/>} ></Route>
     <Route path='/agregarConsulta' element={<Consulta/>} ></Route>
+    <Route path='/AdminTurnos' element={<TurnoAdmin/>} ></Route>
+    <Route path='/agregarTurno' element={<AgregarTurno/>} ></Route>
+    <Route path='/editarTurno/:_id' element={<EditarTurno/>} ></Route>
 
 
     </Routes>
