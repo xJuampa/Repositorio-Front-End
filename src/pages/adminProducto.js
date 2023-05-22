@@ -6,8 +6,10 @@ import ItemListaProducto from "../components/ItemListaProducto";
 import NavegacionLateral from "../components/NavLateral";
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
+import { Logueo } from "../helpers/Validaciones";
 
 function ProductoAdmin (){
+  Logueo()
     const [listaProductos, setListaProductos] = useState([]);
     const URL = "http://localhost:4003/admProductos/" ;
 

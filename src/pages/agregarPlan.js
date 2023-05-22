@@ -5,8 +5,10 @@ import Alert from "react-bootstrap/Alert";
 import { largoInput, topePrecio } from "../helpers/Validaciones";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
+import { Logueo } from "../helpers/Validaciones";
 
 function AgregarPlan() {
+  Logueo()
   const [tituloPlan, setTituloPlan] = useState("");
   const [subtituloPlan, setSubtituloPlan] = useState("");
   const [precioPlan, setPrecioPlan] = useState(0);

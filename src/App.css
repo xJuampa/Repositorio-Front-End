@@ -378,3 +378,15 @@ text-align: center;
 .error-button:hover {
   background-color: #27ae60;
 }
+
+.fondoGralLoguin{
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+}
+.Activa{
+  display: block;
+}
+.Inactiva{
+  display: block;
+}

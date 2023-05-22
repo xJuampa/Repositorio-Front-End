@@ -6,8 +6,10 @@ import ItemListaPlanes from "../components/ItemListaPlanes";
 import NavegacionLateral from "../components/NavLateral";
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
+import { Logueo } from "../helpers/Validaciones";
 
 function AdminPlanes() {
+  Logueo()
   const [listaPlanes, setListaPlanes] = useState([])
   const URL = "http://localhost:4003/admConsulta/";
 

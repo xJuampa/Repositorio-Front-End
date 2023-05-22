@@ -5,8 +5,10 @@ import Alert from "react-bootstrap/Alert";
 import { useParams, useNavigate } from "react-router-dom";
 import { largoInput, topePrecio } from "../helpers/Validaciones";
 import Swal from "sweetalert2";
+import { Logueo } from "../helpers/Validaciones";
 
 function EditarPlan(){
+  Logueo()
     const { _id } = useParams();
     const [paramsPlan, setParamsPlan] = useState({});
     const [paramsPlanEstado, setParamsPlanEstado] = useState("");

@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemListaComentarios from "../components/itemListaComentarios";
 import NavegacionLateral from "../components/NavLateral";
+import { Logueo } from "../helpers/Validaciones";
 
 function AdminComentarios(){
+  Logueo()
     const [listaComentarios, setListaComentarios] = useState([])
   const URL = "http://localhost:4003/admComentarios/";
 

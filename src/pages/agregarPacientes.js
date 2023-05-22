@@ -2,10 +2,12 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import { largoInput, topePrecio} from "../helpers/Validaciones"
+import {largoInput,topePrecio,emailValidation} from "../helpers/Validaciones"
 import Swal from "sweetalert2";
+import { Logueo } from "../helpers/Validaciones";
 
 function AgregarPaciente() {
+  Logueo()
   const [nombrePaciente, setNombrePaciente] = useState("");
   const [apellidoPaciente, setApellidoPaciente] = useState("");
   const [emailPaciente, setEmailPaciente] = useState("");
@@ -22,7 +24,7 @@ function AgregarPaciente() {
     if (
       largoInput(nombrePaciente) &&
       largoInput(apellidoPaciente) &&
-      largoInput(emailPaciente) &&
+      emailValidation(emailPaciente) &&
       largoInput(nombreMascota) &&
       largoInput(especieMascota) &&
       largoInput(razaMascota) &&

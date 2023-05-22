@@ -5,8 +5,10 @@ import Alert from "react-bootstrap/Alert";
 import { useParams, useNavigate } from "react-router-dom";
 import { largoInput, topePrecio } from "../helpers/Validaciones";
 import Swal from "sweetalert2";
+import { Logueo } from "../helpers/Validaciones";
 
 function EditarPaciente(){
+  Logueo()
   const { _id } = useParams();
   const [paramsPacientes, setParamsPacientes] = useState({});
   const [paramsMascotasCat, setParamsMascotasCat] = useState("");

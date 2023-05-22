@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemLista from "../components/ItemLista";
 import NavegacionLateral from "../components/NavLateral";
+import { Logueo } from "../helpers/Validaciones";
 
 
 function PaginaAdmin() {
+  Logueo()
   const [listaPacientes, setListaPacintes] = useState([]);
   const URL = "http://localhost:4003/admPacientes/";
 
