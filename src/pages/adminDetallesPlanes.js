@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemListaDetallesPlanes from "../components/itemsDetallesPlanes";
 import NavegacionLateral from "../components/NavLateral";
+import { Logueo } from "../helpers/Validaciones";
 
 function AdminDetallesPlanes(){
+  Logueo()
     const [listaDetallesPlanes , setListaDetallesPlanes ] = useState([])
   const URL = "http://localhost:4003/admPlanes/";
 

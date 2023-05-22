@@ -218,3 +218,15 @@ margin-right:10px ;
   display: flex;
 
 }
+
+.fondoGralLoguin{
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+}
+.Activa{
+  display: block;
+}
+.Inactiva{
+  display: block;
+}

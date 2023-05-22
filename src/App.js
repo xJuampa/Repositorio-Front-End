@@ -16,7 +16,8 @@ import Comentario from './pages/agregarComentario';
 import AdminDetallesPlanes from './pages/adminDetallesPlanes';
 import AgregarPlan from './pages/agregarPlan';
 import EditarPlan from './pages/editarPlan';
-
+import Register from './pages/Register';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
     <Route path='/adminDetallesPlanes' element={<AdminDetallesPlanes/>} ></Route>
     <Route path='/agregarPlan' element={<AgregarPlan/>} ></Route>
     <Route path='/editarPlan/:_id' element={<EditarPlan/>} ></Route>
+    <Route path='/register' element={<Register/>} ></Route>
+    <Route path='/login' element={<Login/>}></Route>
 
 
     </Routes>

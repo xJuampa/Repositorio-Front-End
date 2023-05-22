@@ -4,8 +4,10 @@ import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
 import { largoInput, topePrecio} from "../helpers/Validaciones"
 import Swal from "sweetalert2";
+import { Logueo } from "../helpers/Validaciones";
 
 function AgregarProductos(){
+  Logueo()
 
     const [nombreProducto, setNombreProducto] = useState("");
     const [imgProducto, setImgProducto ] = useState("");
