@@ -24,6 +24,24 @@ function AgregarTurno() {
   )
   const [error, setError] = useState(false);
 
+  const getIntervalosHorarios = () => {
+    const intervalos = [];
+    const fechaActual = new Date();
+    const horasInicio = 8; // Hora de inicio (8 am)
+    const horasFin = 20; // Hora de fin (20 pm)
+
+    for (let hora = horasInicio; hora < horasFin; hora++) {
+      intervalos.push(setHours(setMinutes(fechaActual, 0), hora));
+      intervalos.push(setHours(setMinutes(fechaActual, 30), hora));
+    }
+
+    return intervalos;
+  };
+
+
+
+
+
   const handleSubmit= async(e)=>{
     e.preventDefault();
     const URL = "http://localhost:4004/admTurnos/";
@@ -137,12 +155,7 @@ function AgregarTurno() {
       onChange={(date) => setStartDate(date)}
       showTimeSelect
       locale="es"
-      includeTimes={[
-        setHours(setMinutes(new Date(), 0), 17),
-        setHours(setMinutes(new Date(), 30), 18),
-        setHours(setMinutes(new Date(), 30), 19),
-        setHours(setMinutes(new Date(), 30), 17),
-      ]}
+      includeTimes={getIntervalosHorarios()}
       dateFormat="d MMMM yyyy - HH:mm"
     />
         </Form.Group>
