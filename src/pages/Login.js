@@ -28,7 +28,8 @@ function Login (){
               const dato = await respuesta.json()
               console.log(dato)
                localStorage.setItem("token",JSON.stringify(dato))
-               navegacion("/");
+               navegacion("/")
+               window.location.reload();
                
         }catch(error){
           console.log(error)

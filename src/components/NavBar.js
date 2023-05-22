@@ -5,7 +5,12 @@ import Button from "react-bootstrap/Button";
 import logoblanco from "../imagenes/logoblanco.png";
 
 function ColorSchemesExample() {
-  const Token = localStorage.getItem("token");
+  const Token = localStorage.getItem ("token");
+
+  const cerrarSecion =()=>{
+    localStorage.removeItem("token");
+    window.location.reload();
+  }
   
   return (
     <>
@@ -24,17 +29,17 @@ function ColorSchemesExample() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#features">Nosotros</Nav.Link>
             <Nav.Link href="#pricing">Planes</Nav.Link>
-            <Nav.Link  style={{ display: Token?  'none': 'block'  }}   href="/Admin">
+            <Nav.Link style={{ display: Token? 'block' : 'none' }}  href="/Admin">
               Admin
             </Nav.Link>
 
-            <Button className="m-1" style={{ display: Token? 'block' : 'none' }} href="/login" variant="outline-light">
+            <Button className="m-1" style={{ display: Token?  'none': 'block'  }} href="/login" variant="outline-light">
               Iniciar sesion
             </Button>
-            <Button className="m-1" style={{ display: Token? 'block' : 'none' }} href="/register" variant="outline-light">
+            <Button className="m-1" style={{ display: Token?  'none': 'block'  }} href="/register" variant="outline-light">
               Registrarme
             </Button>
-            <Button className="m-1" style={{ display: Token?  'none': 'block'  }} href="/login" variant="outline-light" >
+            <Button className="m-1" onClick={cerrarSecion} style={{ display: Token? 'block' : 'none' }} href="/login" variant="outline-light" >
               Cerrar sesion
             </Button>
           </Nav>
