@@ -16,6 +16,8 @@ import Comentario from './pages/agregarComentario';
 import AdminDetallesPlanes from './pages/adminDetallesPlanes';
 import AgregarPlan from './pages/agregarPlan';
 import EditarPlan from './pages/editarPlan';
+import Error from './pages/error';
+import AcercaDeNosotros from './pages/acercaDeNosotros';
 
 
 function App() {
@@ -38,6 +40,8 @@ function App() {
     <Route path='/adminDetallesPlanes' element={<AdminDetallesPlanes/>} ></Route>
     <Route path='/agregarPlan' element={<AgregarPlan/>} ></Route>
     <Route path='/editarPlan/:_id' element={<EditarPlan/>} ></Route>
+    <Route path='/acercaDeNosotros' element={<AcercaDeNosotros/>} ></Route>
+    <Route path='/*' element={<Error/>} ></Route>
 
 
     </Routes>
