@@ -16,7 +16,7 @@ function ItemLista ({items, consultaApiPacientes}){
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const URLDelete = "http://localhost:4009/admPacientes/" + items._id;
+          const URLDelete = "http://localhost:4003/admPacientes/" + items._id;
           const respuesta = await fetch(URLDelete, {
             method: "DELETE",
             headers: {
