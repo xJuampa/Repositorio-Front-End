@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { IoMdCreate,IoMdTrash } from "react-icons/io";
 
 function ItemLista ({items, consultaApiPacientes}){
 
@@ -46,17 +47,18 @@ function ItemLista ({items, consultaApiPacientes}){
 
     return(
       <tbody>
+     
       <tr>
         <td>{items.nombrePaciente} {items.apellidoPaciente}</td>
-        <td>{items.emailPaciente}</td>
-        <td>{items.telefonoPaciente}</td>
+        <td >{items.emailPaciente}</td>
+        <td >{items.telefonoPaciente}</td>
         <td>{items.especieMascota}({items.razaMascota})</td>
         <td>{items.nombreMascota}</td>
-        <Link to={`/editarPaciente/${items._id}`}  className="btn btn-warning me-3">
-            Editar
+        <Link to={`/editarPaciente/${items._id}`}  className="btn btn-outline-warning m-1"><IoMdCreate/>
+            
           </Link>
-          <Link className="btn btn-danger" onClick={eliminarPaciente} >
-            Borrar
+          <Link className="btn btn-outline-danger m-1" onClick={eliminarPaciente} ><IoMdTrash/>
+        
           </Link>
       </tr>
       </tbody>

@@ -9,7 +9,7 @@ function ColorSchemesExample() {
   
   return (
     <>
-      <Navbar className="Navbar" variant="dark">
+      <Navbar className='Navbar' variant="dark">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -17,12 +17,9 @@ function ColorSchemesExample() {
               src={logoblanco}
               width="45"
               height="40"
-              className="d-inline-block align-top"
-            />
-            <a className="nombreNav" href="#home">
-              <span>Rolling</span>Vet
-            </a>
-          </Navbar.Brand>
+              className="d-inline-block align-top"/>
+              <a className='nombreNav' href='#home'><span>Rolling</span>Vet</a>
+            </Navbar.Brand>
           <Nav className="navLink">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#features">Nosotros</Nav.Link>

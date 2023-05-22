@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { IoMdTrash } from "react-icons/io";
 
 function ItemListaComentarios ({items,consultaApiComentarios}){
   const eliminarComentario = () => {
@@ -44,15 +45,17 @@ function ItemListaComentarios ({items,consultaApiComentarios}){
   };
     return (
       <tbody>
-      <tr >
+    
+      <tr>
         <td>{items.nombreComentario}</td>
         <td>{items.emailComentario}</td>
         <td>{items.telefonoComentario}</td>
-        <td >{items.descripcionComentario}</td>
-          <Link className="btn btn-danger"  onClick={eliminarComentario}>
-            Borrar
+        <td>{items.descripcionComentario}</td>
+          <Link className="btn btn-outline-danger"  onClick={eliminarComentario}><IoMdTrash/>
+           
           </Link>
       </tr>
+
       </tbody>
       
 

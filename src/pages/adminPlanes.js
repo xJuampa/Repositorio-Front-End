@@ -42,9 +42,9 @@ function AdminPlanes() {
       <NavegacionLateral />
     </div>
     <div className="moverLista">
-    <div className="Listado" >
+    <div className=" table-responsive Listado">
     
-  <Table responsive>
+  <Table className="table table-striped">
       
       <thead>
         <tr>
@@ -52,6 +52,7 @@ function AdminPlanes() {
           <th>Email</th>
           <th>Telefono</th>
           <th >Descripcion</th>
+          <th >Opciones</th>
         </tr>
       </thead>
       {listaPlanes.map((items) => (

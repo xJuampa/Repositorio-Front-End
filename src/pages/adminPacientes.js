@@ -39,14 +39,13 @@ function PaginaAdmin() {
       <NavegacionLateral />
     </div>
     <div className="moverLista">
-    <div className="Listado" >
+    <div className=" table-responsive Listado" >
     <Link
     to="/agregarPaciente"
-    className="btn btn-success d-flex m-5 justify-content-center"
-  >
+    className="btn btn-success d-flex m-5 justify-content-center">
     Agregar Paciente
   </Link>
-  <Table>
+  <Table className="table table-striped">
       
       <thead>
         <tr>
@@ -55,6 +54,7 @@ function PaginaAdmin() {
           <th>Telefono</th>
           <th>Mascota</th>
           <th>Nombre mascota</th>
+          <th>Opciones</th>
         </tr>
       </thead>
       {listaPacientes.map((items) => (

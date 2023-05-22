@@ -44,14 +44,14 @@ function ProductoAdmin (){
           <NavegacionLateral />
         </div>
         <div className="moverLista">
-        <div className="Listado">
+        <div className=" table-responsive Listado">
         <Link
         to="/agregarProducto"
         className="btn btn-success d-flex m-5 justify-content-center"
       >
         Agregar Producto
       </Link>
-      <Table>
+      <Table className="table table-striped">
           
           <thead>
             <tr>
@@ -59,6 +59,7 @@ function ProductoAdmin (){
               <th>Nombre</th>
               <th>Precio</th>
               <th>Marca</th>
+              <th>Opciones</th>
             </tr>
           </thead>
           {listaProductos.map((items) => (

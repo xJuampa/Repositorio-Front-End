@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { IoMdCreate,IoMdTrash } from "react-icons/io";
 
 function ItemListaDetallesPlanes ({items,consultaApiDetallesPlanes}){
   const eliminarDetallesPlanes = () => {
@@ -49,11 +50,9 @@ function ItemListaDetallesPlanes ({items,consultaApiDetallesPlanes}){
         <td>{items.tituloPlan}</td>
         <td>{items.subtituloPlan}</td>
         <td >{items.precioPlan}</td>
-        <Link to={`/editarPlan/${items._id}`}  className="btn warning me-3">
-            Editar
+        <Link to={`/editarPlan/${items._id}`}  className="btn btn-outline-warning m-1"><IoMdCreate/>
           </Link>
-          <Link className="btn btn-danger"  onClick={eliminarDetallesPlanes}>
-            Borrar
+          <Link className="btn btn-outline-danger m-1"  onClick={eliminarDetallesPlanes}><IoMdTrash/>
           </Link>
       </tr>
       </tbody>

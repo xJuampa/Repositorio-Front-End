@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { IoMdCreate,IoMdTrash } from "react-icons/io";
 
 function ItemListaProducto ({items, consultaApiProductos}){
 
@@ -50,11 +51,9 @@ function ItemListaProducto ({items, consultaApiProductos}){
         <td>{items.nombreProducto}</td>
         <td>{items.precioProducto}</td>
         <td>{items.marcaProducto}</td>
-        <Link to={`/editarProducto/${items._id}`}  className="btn warning me-3">
-            Editar
+        <Link to={`/editarProducto/${items._id}`}  className="btn btn-outline-warning m-1"><IoMdCreate/>
           </Link>
-          <Link className="btn btn-danger" onClick={() => eliminarObjetos()} >
-            Borrar
+          <Link className="btn btn-outline-danger m-1" onClick={() => eliminarObjetos()} ><IoMdTrash/>
           </Link>
       </tr>
       </tbody>

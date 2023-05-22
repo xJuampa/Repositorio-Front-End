@@ -38,14 +38,14 @@ function AdminDetallesPlanes(){
       <NavegacionLateral />
     </div>
     <div className="moverLista">
-    <div className="Listado" >
+    <div className=" table-responsive Listado" >
     <Link
         to="/agregarPlan"
         className="btn btn-success d-flex m-5 justify-content-center"
       >
         Agregar Plan
       </Link>
-  <Table responsive>
+      <Table className="table table-striped">
       
       <thead>
         <tr>
@@ -53,6 +53,7 @@ function AdminDetallesPlanes(){
           <th >Titulo</th>
           <th>Subtitulo</th>
           <th>Precio</th>
+          <th>Opciones</th>
         </tr>
       </thead>
       {listaDetallesPlanes.map((items) => (
