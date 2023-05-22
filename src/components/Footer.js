@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from 'react-bootstrap/Nav';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 import logoblanco from '../imagenes/logoblanco.png';
 import { SlSocialInstagram, SlSocialLinkedin, SlSocialFacebook, SlSocialTwitter} from "react-icons/sl";
@@ -58,6 +59,7 @@ function Footer(){
                 vetrolling@gmail.com.ar
                 
               </p>
+              
 
             </MDBCol>
 
@@ -69,6 +71,7 @@ function Footer(){
                 <a href='#'><SlSocialFacebook/></a> 
                 <a href='#'><SlSocialTwitter/></a>
             </div>
+            <Nav.Link href="/agregarComentario">Dejanos tu comentario!</Nav.Link>
             </MDBCol>
           </MDBRow>
         </MDBContainer>

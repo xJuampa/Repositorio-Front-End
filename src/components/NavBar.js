@@ -24,6 +24,7 @@ function ColorSchemesExample() {
             <Nav.Link href="#features">Nosotros</Nav.Link>
             <Nav.Link href="#pricing">Planes</Nav.Link>
             <Nav.Link href="/Admin">Admin</Nav.Link>
+            
             <Button variant="outline-light">Iniciar sesion</Button>
           </Nav>
         </Container>
