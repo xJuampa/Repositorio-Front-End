@@ -51,7 +51,7 @@ function ItemListaComentarios ({items,consultaApiComentarios}){
         <td>{items.emailComentario}</td>
         <td>{items.telefonoComentario}</td>
         <td>{items.descripcionComentario}</td>
-          <Link className="btn btn-outline-danger"  onClick={eliminarComentario}><IoMdTrash/>
+          <Link className="btn btn-outline-danger m-2"  onClick={eliminarComentario}><IoMdTrash/>
            
           </Link>
       </tr>

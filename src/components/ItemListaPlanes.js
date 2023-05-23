@@ -50,7 +50,7 @@ function ItemListaPlanes ({items,consultaApiPlanes}){
         <td>{items.MailCliente}</td>
         <td>{items.telefonoCliente}</td>
         <td >{items.Descripcion}</td>
-          <Link className="btn btn-outline-danger"  onClick={eliminarConsulta}><IoMdTrash/>
+          <Link className="btn btn-outline-danger m-2"  onClick={eliminarConsulta}><IoMdTrash/>
           </Link>
       </tr>
       </tbody>

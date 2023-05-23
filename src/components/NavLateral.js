@@ -5,46 +5,45 @@ import {
   IoIosCart,
   IoMdHelp,
   IoIosPaper,
-  IoMdChatbubbles
+  IoMdChatbubbles,
 } from "react-icons/io";
 
 function NavegacionLateral() {
   return (
-    <div>
       <div className="contenedorLateral">
         <div>
-          <Link to={`/Admin`} className="btn">
-            <IoIosContacts /> Pacientes
+          <Link to={`/Admin`} className="btn"title="Pacientes">
+            <IoIosContacts /> 
           </Link>
         </div>
         <div>
-          <Link to={`/Admin`} className="btn">
+          <Link to={`/Admin`} className="btn" title="Turnos">
             <IoIosCalendar />
-            Turnos
+            
           </Link>
         </div>
         <div>
-          <Link to={`/AdminProducto`} className="btn">
-            <IoIosCart /> Productos
+          <Link to={`/AdminProducto`} className="btn" title="Productos">
+            <IoIosCart /> 
           </Link>
         </div>
         <div>
-          <Link to={`/adminPlanes`} className="btn">
-            <IoMdHelp /> Consultas
+          <Link to={`/adminPlanes`} className="btn" title="Preguntas">
+            <IoMdHelp /> 
           </Link>
         </div>
         <div>
-          <Link to={`/adminDetallesPlanes`} className="btn">
-            <IoIosPaper /> Planes
+          <Link to={`/adminDetallesPlanes`} className="btn" title="Planes">
+            <IoIosPaper /> 
           </Link>
         </div>
         <div>
-          <Link to={`/adminComentarios`} className="btn">
-           <IoMdChatbubbles/> Comentarios
+          <Link to={`/adminComentarios`} className="btn" title="Comentarios">
+           <IoMdChatbubbles/> 
           </Link>
         </div>
       </div>
-    </div>
   );
 }
 export default NavegacionLateral;
+
