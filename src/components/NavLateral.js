@@ -17,7 +17,7 @@ function NavegacionLateral() {
           </Link>
         </div>
         <div>
-          <Link to={`/Admin`} className="btn" title="Turnos">
+          <Link to={`/AdminTurnos`} className="btn" title="Turnos">
             <IoIosCalendar />
             
           </Link>

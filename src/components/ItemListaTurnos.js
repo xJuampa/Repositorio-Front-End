@@ -16,7 +16,7 @@ function ItemListaTurno ({items, consultaApiTurnos}){
         }).then(async (result) => {
           if (result.isConfirmed) {
             try {
-              const URLDelete = "http://localhost:4004/admTurnos/" + items._id;
+              const URLDelete = "http://localhost:4003/admTurnos/" + items._id;
               const respuesta = await fetch(URLDelete, {
                 method: "DELETE",
                 headers: {

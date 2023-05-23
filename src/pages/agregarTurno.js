@@ -11,6 +11,8 @@ import "react-datepicker/dist/react-datepicker.css";
 import { registerLocale, setDefaultLocale } from  "react-datepicker";
 import es from 'date-fns/locale/es';
 registerLocale('es', es)
+import { useNavigate } from "react-router-dom";
+
 
 
 function AgregarTurno() {
@@ -19,7 +21,8 @@ function AgregarTurno() {
   const [veterinarioNombre, setVeterinarioNombre] = useState("");
   const [especieMascota, setEspecieMascota] = useState("");
   const [telefonoContacto, setTelefonoContacto] = useState(0);
-//   const [fechaYHora, setFechaYHora] = useState(new Date());
+  const navegacion = useNavigate()
+
   const [startDate, setStartDate] = useState(setHours(setMinutes(new Date(), 30), 16)
   )
   const [error, setError] = useState(false);
@@ -27,8 +30,8 @@ function AgregarTurno() {
   const getIntervalosHorarios = () => {
     const intervalos = [];
     const fechaActual = new Date();
-    const horasInicio = 8; // Hora de inicio (8 am)
-    const horasFin = 20; // Hora de fin (20 pm)
+    const horasInicio = 8; 
+    const horasFin = 20; 
 
     for (let hora = horasInicio; hora < horasFin; hora++) {
       intervalos.push(setHours(setMinutes(fechaActual, 0), hora));
@@ -44,7 +47,7 @@ function AgregarTurno() {
 
   const handleSubmit= async(e)=>{
     e.preventDefault();
-    const URL = "http://localhost:4004/admTurnos/";
+    const URL = "http://localhost:4003/admTurnos/";
 
     if (
       largoInput(servicio) &&
@@ -81,6 +84,7 @@ function AgregarTurno() {
             timer: 1500,
           })
           e.target.reset();
+           navegacion("/adminTurnos")
         } else {
           Swal.fire({
             position: "top-center",

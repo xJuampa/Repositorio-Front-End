@@ -21,10 +21,23 @@ function EditarTurno(){
   const [paramsServicio, setParamsServicio] = useState("");
   const [paramsFechaYHora, setParamsFechaYHora] = useState("");
   const [startDate, setStartDate] = useState(setHours(setMinutes(new Date(), 30), 16))
+  const getIntervalosHorarios = () => {
+    const intervalos = [];
+    const fechaActual = new Date();
+    const horasInicio = 8; 
+    const horasFin = 20; 
+
+    for (let hora = horasInicio; hora < horasFin; hora++) {
+      intervalos.push(setHours(setMinutes(fechaActual, 0), hora));
+      intervalos.push(setHours(setMinutes(fechaActual, 30), hora));
+    }
+
+    return intervalos;
+  };
 
 
 
-  const URL = "http://localhost:4004/admTurnos/"+_id;  
+  const URL = "http://localhost:4003/admTurnos/"+_id;  
   const [error, setError] = useState(false);
   const navegacion = useNavigate()
 
@@ -155,18 +168,11 @@ function EditarTurno(){
         <Form.Group className="mb-3">
           <Form.Label>Seleccione dia y horario</Form.Label>
           <DatePicker
-    //   selected={startDate}
-    //   onChange={(date) => setStartDate(date)}
-    defautvalue={paramsTurnos.fechaYHora}
-    // onChange={(e) => setStartDate(e.target.value)}
+      selected={startDate}
+      onChange={(date) => setStartDate(date)}
       showTimeSelect
       locale="es"
-      includeTimes={[
-        setHours(setMinutes(new Date(), 0), 17),
-        setHours(setMinutes(new Date(), 30), 18),
-        setHours(setMinutes(new Date(), 30), 19),
-        setHours(setMinutes(new Date(), 30), 17),
-      ]}
+      includeTimes={getIntervalosHorarios()}
       dateFormat="d MMMM yyyy - HH:mm"
     />
         </Form.Group>
@@ -174,9 +180,9 @@ function EditarTurno(){
         
         
         
-        {error === true ? (
+        {/* {error === true ? (
           <Alert variant="danger">Corrobore los datos ingresados</Alert>
-        ) : null}
+        ) : null} */}
 
         <Button variant="primary" type="submit">
           Enviar

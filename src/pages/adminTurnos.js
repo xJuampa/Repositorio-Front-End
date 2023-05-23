@@ -10,7 +10,7 @@ import ItemListaTurno from "../components/ItemListaTurnos";
 
 function TurnoAdmin () {
     const [listaTurnos, setListaTurnos] = useState([]);
-    const URL = "http://localhost:4004/admTurnos/" ;
+    const URL = "http://localhost:4003/admTurnos/" ;
 
     useEffect(() => {
         consultaApiTurnos();
