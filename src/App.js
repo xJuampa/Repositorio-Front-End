@@ -11,15 +11,6 @@ import PagPrincipal from './pages/pagPrincipal';
 import Consulta from './pages/agregarConsulta';
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
-import AdminComentarios from './pages/adminComentarios';
-import Comentario from './pages/agregarComentario';
-import AdminDetallesPlanes from './pages/adminDetallesPlanes';
-import AgregarPlan from './pages/agregarPlan';
-import EditarPlan from './pages/editarPlan';
-import Error from './pages/error';
-import AcercaDeNosotros from './pages/acercaDeNosotros';
-import Login from './pages/Login';
-import Register from './pages/Register';
 
 
 function App() {
@@ -46,6 +37,9 @@ function App() {
     <Route path='/login' element={<Login/>} ></Route>
     <Route path='/register' element={<Register/>} ></Route>
     <Route path='/*' element={<Error/>} ></Route>
+    <Route path='/AdminTurnos' element={<TurnoAdmin/>} ></Route>
+    <Route path='/agregarTurno' element={<AgregarTurno/>} ></Route>
+    <Route path='/editarTurno/:_id' element={<EditarTurno/>} ></Route>
 
 
     </Routes>
