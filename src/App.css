@@ -39,7 +39,7 @@
 
 /* Clima API */
 
-.weather-container {
+/* .weather-container {
   background-color: #f1f1f1;
   border-radius: 8px;
   padding: 20px;
@@ -169,4 +169,33 @@
   .extra-info {
     font-size: 14px;
   }
+} */
+
+.weather-widget {
+  display: flex;
+  align-items: center;
+  color: #dfe1a8;
+  font-size: 16px;
+}
+
+.temperature {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.description {
+  margin-right: 10px;
+}
+
+.loading {
+  color: #ea7070;
+}
+
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
