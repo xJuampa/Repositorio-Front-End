@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import petshop from "../imagenes/petshop.png";
 import peluqueria from "../imagenes/peluqueria.png";
 import atencionmedica from "../imagenes/atencionmedica.png";
-import nutrique from "../imagenes/nutrique.png";
-import comedero from "../imagenes/comedero.png";
-import balanced from "../imagenes/balanced.png";
+import maritasuares from "../imagenes/maritasuares.png";
+import fabiorodriguez from "../imagenes/fabiorodriguez.png";
+import susanacardozo from "../imagenes/susanacardozo.png";
 
 function PagPrincipal() {
   const [listaProductos, setListaProductos] = useState([]);
@@ -62,20 +62,20 @@ function PagPrincipal() {
             <h2>Nuestros servicios</h2>
           </div>
           <div className="container">
-            <div className="row tarjetaServicios">
-            <div className="members-container col-lg-3 m-3">
+            <div className="tarjetaServicios">
+            <div className=" col-lg-3 m-5">
           <div className="member-card">
             <img className="p-3" src={atencionmedica} alt="Miembro 1" />
             <h2 className="acomodarTitulos">Atencion Medica</h2>
           </div>
           </div>
-          <div className="members-container col-lg-3 m-3 ">
+          <div className="col-lg-3 m-5  ">
           <div className="member-card ">
-            <img className="p-3 imagenservicio" src={peluqueria} alt="Miembro 1" />
+            <img className="p-3"  src={peluqueria} alt="Miembro 1" />
             <h2 className="acomodarTitulos">Peluqueria</h2>
           </div>
           </div>
-          <div className="members-container col-lg-3 m-3">
+          <div className="col-lg-3 m-5">
           <div className="member-card">
             <img className="p-3" src={petshop} alt="Miembro 1" />
             <h2 className="acomodarTitulos">Pet-Shop</h2>
@@ -89,7 +89,7 @@ function PagPrincipal() {
       <section className="tamañoSection2">
         <div className="acomodarServicio">
           <div className="acomodarTitulos">
-            <h2>Destacados</h2>
+            <h2>Productos</h2>
           </div>
           <div className="container ProductosDestacados">
             <div className="row">
@@ -101,7 +101,7 @@ function PagPrincipal() {
         </div>
       </section>
 
-      <section className="acomodarImagen">
+      <section className="publicidad">
         <div>
           <img src="https://petplaza.com.do/img/cms/Royal-canin-2.jpg" alt="" />
         </div>
@@ -127,30 +127,37 @@ function PagPrincipal() {
             <h2>Nuestro Personal</h2>
           </div>
           <div className="container">
-            <div className="row ">
-              <div className="col-lg-3 col-md-3  estiloCards">
+            <div className="row contenedorcards">
+              <div className="col-lg-3   estiloCards">
                 <img
                   className="tamañoServicios"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJ6TurnBGajJc0zqdRUoWgMsedLGKC4J0N9CXsooSYYyG3-k3Y4MrSt8T4G34QBFS7vw&usqp=CAU"
+                  src={susanacardozo}
                   alt=""
                 />
-                <h4>Vet.Francisco Ruiz</h4>
+                <h3>Vet.Susana Diaz</h3>
+                <h5>Lunes a Viernes</h5>
+                <h6>9 a 14hs </h6>
               </div>
-              <div className="col-lg-3 col-md-3   estiloCards">
+              <div className="col-lg-3 estiloCards">
                 <img
                   className="tamañoServicios"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJ6TurnBGajJc0zqdRUoWgMsedLGKC4J0N9CXsooSYYyG3-k3Y4MrSt8T4G34QBFS7vw&usqp=CAU"
+                  src={fabiorodriguez}
                   alt=""
                 />
-                <h4>Vet.Luis paez</h4>
+                <h3>Vet.Fabio Lopez</h3>
+                <h5>Lunes a Viernes</h5>
+                <h6>17 a 22hs </h6>
               </div>
-              <div className="col-lg-3 col-md-3   estiloCards">
+              <div className="col-lg-3   estiloCards">
                 <img
                   className="tamañoServicios"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZJ6TurnBGajJc0zqdRUoWgMsedLGKC4J0N9CXsooSYYyG3-k3Y4MrSt8T4G34QBFS7vw&usqp=CAU"
+                  src={maritasuares}
                   alt=""
                 />
-                <h4>Vet.Mirtha Zaez</h4>
+                <h3>Vet.Marita Suarez</h3>
+                <h5>Sabados y Domingo</h5>
+                <h6> 10 a 17hs </h6>
+
               </div>
             </div>
           </div>
