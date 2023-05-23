@@ -37,13 +37,15 @@ function ColorSchemesExample() {
             className={isOpen ? "navbar-toggler-open" : "navbar-toggler-close"}
           />
           <Navbar.Collapse id="navbar-nav" className={isOpen ? "show" : ""}>
-            <Nav className="ml-auto ">
+            <Nav className="ml-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/acercaDeNosotros">Nosotros</Nav.Link>
-              <Nav.Link href="#pricing">Planes</Nav.Link>
+              <Nav.Link href="/verPlanes">Planes</Nav.Link>
               {Token && (
                 <Nav.Link href="/Admin">Admin</Nav.Link>
               )}
+            </Nav>
+            <div className="button-container">
               {!Token && (
                 <>
                   <Button
@@ -51,7 +53,7 @@ function ColorSchemesExample() {
                     href="/login"
                     variant="outline-light"
                   >
-                    Iniciar sesion
+                    Iniciar sesión
                   </Button>
                   <Button
                     className="m-1"
@@ -68,10 +70,10 @@ function ColorSchemesExample() {
                   onClick={cerrarSesion}
                   variant="outline-light"
                 >
-                  Cerrar sesion
+                  Cerrar sesión
                 </Button>
               )}
-            </Nav>
+            </div>
           </Navbar.Collapse>
         </Container>
       </Navbar>
