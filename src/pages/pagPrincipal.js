@@ -1,6 +1,12 @@
 import Cards from "../components/Card";
 import Comentarios from "../components/comentarios";
 import { useState, useEffect } from "react";
+import petshop from "../imagenes/petshop.png";
+import peluqueria from "../imagenes/peluqueria.png";
+import atencionmedica from "../imagenes/atencionmedica.png";
+import nutrique from "../imagenes/nutrique.png";
+import comedero from "../imagenes/comedero.png";
+import balanced from "../imagenes/balanced.png";
 
 function PagPrincipal() {
   const [listaProductos, setListaProductos] = useState([]);
@@ -50,28 +56,28 @@ function PagPrincipal() {
         </div>
       </div>
 
-      <section className="tamañoSection">
+      <section className="tamañoSection1">
         <div className="acomodarServicio">
           <div className="acomodarTitulos">
             <h2>Nuestros servicios</h2>
           </div>
           <div className="container">
-            <div className="row ">
-            <div className="members-container col-lg-3 m-3 ">
+            <div className="row tarjetaServicios">
+            <div className="members-container col-lg-3 m-3">
           <div className="member-card">
-            <img className="p-3" src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="Miembro 1" />
+            <img className="p-3" src={atencionmedica} alt="Miembro 1" />
             <h2 className="acomodarTitulos">Atencion Medica</h2>
           </div>
           </div>
           <div className="members-container col-lg-3 m-3 ">
           <div className="member-card ">
-            <img className="p-3" src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="Miembro 1" />
+            <img className="p-3 imagenservicio" src={peluqueria} alt="Miembro 1" />
             <h2 className="acomodarTitulos">Peluqueria</h2>
           </div>
           </div>
           <div className="members-container col-lg-3 m-3">
           <div className="member-card">
-            <img className="p-3" src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="Miembro 1" />
+            <img className="p-3" src={petshop} alt="Miembro 1" />
             <h2 className="acomodarTitulos">Pet-Shop</h2>
           </div>
           </div>
@@ -80,12 +86,12 @@ function PagPrincipal() {
         </div>
       </section>
 
-      <section className="tamañoSection">
+      <section className="tamañoSection2">
         <div className="acomodarServicio">
           <div className="acomodarTitulos">
             <h2>Destacados</h2>
           </div>
-          <div className="container">
+          <div className="container ProductosDestacados">
             <div className="row">
               {listaProductos.map((items) => (
                 <Cards items={items} key={items._id} />
@@ -101,13 +107,13 @@ function PagPrincipal() {
         </div>
       </section>
 
-      <section className="tamañoSection">
+      <section className="tamañoSection3">
         <div className="acomodarServicio">
           <div className="acomodarTitulos">
             <h2>Lo que dicen nuestros Clientes</h2>
           </div>
-          <div className="container">
-            <div className="row acomodarTitulos">
+          <div className="container comentarios">
+            <div className="row">
               {listaComentarios.map((items) => (
                 <Comentarios items={items} key={items._id} />
               ))}
@@ -115,7 +121,7 @@ function PagPrincipal() {
           </div>
         </div>
       </section>
-      <section className="tamañoSection">
+      <section className="tamañoSection4">
         <div className="acomodarServicio">
           <div className="acomodarTitulos">
             <h2>Nuestro Personal</h2>

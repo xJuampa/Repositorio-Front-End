@@ -9,14 +9,14 @@ const Cards = ({items}) => {
   };
 
   return (
-    <div className='col-lg-3 tamaño'>
+    <div className='col-lg-3 tamaño '>
         <div className={`card ${isExpanded ? 'expanded' : ''}`} onClick={expandCard}>
       <div className="card-image">
         <img src={items.imgProducto} alt="Imagen de la tarjeta" />
       </div>
-      <div className="card-header">
-        <h3>{items.nombreProducto}</h3>
-        <h5>{items.marcaProducto}</h5>
+      <div className="card-header TituloProducto">
+        <h5>{items.nombreProducto}</h5>
+        <h6>{items.marcaProducto}</h6>
         <h6>{items.precioProducto}</h6>
       </div>
       {isExpanded && (
