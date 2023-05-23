@@ -8,7 +8,7 @@ const largoInput=(dato)=>{
 }
 
 const topePrecio=(dato)=>{
-    if(dato <= 0 || dato >= 50000 ){
+    if(dato >= 0 || dato <= 50000 ){
         return true;
     }else{
         return false;

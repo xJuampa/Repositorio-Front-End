@@ -40,7 +40,7 @@ function ColorSchemesExample() {
             <Nav className="ml-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/acercaDeNosotros">Nosotros</Nav.Link>
-              <Nav.Link href="#pricing">Planes</Nav.Link>
+              <Nav.Link href="/verPlanes">Planes</Nav.Link>
               {Token && (
                 <Nav.Link href="/Admin">Admin</Nav.Link>
               )}
