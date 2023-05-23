@@ -57,7 +57,7 @@ function PagPrincipal() {
           </div>
           <div className="container">
             <div className="row ">
-            <div className="members-container col-lg-3 me-3 ">
+            <div className="members-container col-lg-3 m-3 ">
           <div className="member-card">
             <img className="p-3" src="https://c.files.bbci.co.uk/48DD/production/_107435681_perro1.jpg" alt="Miembro 1" />
             <h2 className="acomodarTitulos">Atencion Medica</h2>

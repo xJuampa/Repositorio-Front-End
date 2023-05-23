@@ -5,13 +5,16 @@
     margin: 0%;
     padding: 0%;
   }
-  .background{
-    display: flex;
-    background-image: url(./imagenes/background.png);
-    height: 100vh;
-    margin-top: -66px;
-    background-size: cover;
-  }
+  .background {
+  display: flex;
+  background-image: url(./imagenes/background.png);
+  height: 40%;
+ padding-top: 15%;
+ padding-bottom: 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
   .Navbar{
     background-color:rgb(41, 40, 40);
     position: sticky;
