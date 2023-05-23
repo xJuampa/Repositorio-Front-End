@@ -36,6 +36,11 @@
   .nombreNav span:hover{
     color: orange;
   }
+  .button-container {
+    margin-left: auto;
+  }
+
+
   /*-----------------------------------------------FOOTER---------------------------------------------------------------------*/
   .redesf{
     display: flex;
@@ -240,6 +245,8 @@ text-align: center;
 
 }
 /*--------------------perfiles acerca de nosotros---------------------------*/
+
+
 .about-page {
   text-align: center;
   padding: 40px;
@@ -254,15 +261,40 @@ text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+.image-container {
+  
+  width: 100%;
+ 
+}
+
+.image-container img {
+  width: 100%;
+  height: 30%;
+  
+}
+.title_desc {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center; 
+}
+
+
 
 .members-container {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  background-color: #f7f7f7;
 }
 
 .member-card {
+  margin-top: 40px;
+  margin-bottom: 40px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -292,7 +324,26 @@ text-align: center;
   color: #666;
 }
 
-/* Estilos específicos para la veterinaria */
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 30px;
+
+}
+
+.social-icons a {
+  margin: 20px;
+  color: orange;
+}
+
+.social-icons a:hover{
+  color: black;
+} 
+
+
+
+
 .member-card {
   background-color: #fff;
   border-radius: 8px;
