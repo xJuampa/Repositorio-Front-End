@@ -78,6 +78,7 @@ const handleSubmit = async (e) => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Nombre y apellido</Form.Label>
               <Form.Control
+              required minlength="3" maxlength="20"
                 type="text"
                 placeholder=""
                 onChange={(e) => setNombreCliente(e.target.value)}
@@ -87,6 +88,7 @@ const handleSubmit = async (e) => {
               <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email</Form.Label>
               <Form.Control
+              required minlength="9" maxlength="30"
                 type="text"
                 placeholder="ejemplo@ejemplo.com"
                 onChange={(e) => setMailCliente(e.target.value)}
@@ -95,6 +97,7 @@ const handleSubmit = async (e) => {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Telefono de contacto</Form.Label>
               <Form.Control
+              required minlength="9" maxlength="11"
                 type="namber"
                 placeholder="+54 0381 "
                 onChange={(e) => setTelefonoCliente(e.target.value)}
@@ -103,6 +106,7 @@ const handleSubmit = async (e) => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Escriba aqui su consulta</Form.Label>
               <Form.Control
+              required minlength="6" maxlength="100"
                 as="textarea"
                  rows={3}
                 placeholder="Escriba aqui su consulta"

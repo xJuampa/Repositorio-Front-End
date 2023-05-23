@@ -46,8 +46,8 @@ function EditarPaciente(){
       largoInput(EmailPacienteRef.current.value) &&
       largoInput(NombreMascotaRef.current.value) &&
       largoInput(paramsMascotasCat) &&
-      largoInput(RazaMascotaRef.current.value) &&
-      topePrecio(TelefonoPacienteRef.current.value)
+      largoInput(RazaMascotaRef.current.value) 
+    
       ) {
         const editarPaciente = {
           nombrePaciente:NombrePacienteRef.current.value,
@@ -101,23 +101,23 @@ function EditarPaciente(){
           <Form className="container" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre del Paciente</Form.Label>
-          <Form.Control type="text" placeholder="Nombre del Paciente" defaultValue={paramsPacientes.nombrePaciente} ref={NombrePacienteRef} />
+          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Nombre del Paciente" defaultValue={paramsPacientes.nombrePaciente} ref={NombrePacienteRef} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Apellido del Paciente</Form.Label>
-          <Form.Control type="text" placeholder="Apellido del Paciente" defaultValue={paramsPacientes.apellidoPaciente} ref={ApellidoPacienteRef}/>
+          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Apellido del Paciente" defaultValue={paramsPacientes.apellidoPaciente} ref={ApellidoPacienteRef}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email del Paciente</Form.Label>
-          <Form.Control type="email" placeholder="Email del Paciente" defaultValue={paramsPacientes.emailPaciente} ref={EmailPacienteRef} />
+          <Form.Control required minlength="9" maxlength="30" type="email" placeholder="Email del Paciente" defaultValue={paramsPacientes.emailPaciente} ref={EmailPacienteRef} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Telefono</Form.Label>
-          <Form.Control type="number" placeholder="Telefono" defaultValue={paramsPacientes.telefonoPaciente} ref={TelefonoPacienteRef}/>
+          <Form.Control required minlength="9" maxlength="11" type="number" placeholder="Telefono" defaultValue={paramsPacientes.telefonoPaciente} ref={TelefonoPacienteRef}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre de la mascota</Form.Label>
-          <Form.Control type="text" placeholder="Nombre de la mascota" defaultValue={paramsPacientes.nombreMascota} ref={NombreMascotaRef} />
+          <Form.Control required minlength="2" maxlength="10" type="text" placeholder="Nombre de la mascota" defaultValue={paramsPacientes.nombreMascota} ref={NombreMascotaRef} />
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Especie de la mascota</Form.Label>
@@ -132,7 +132,7 @@ function EditarPaciente(){
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Raza de la mascota</Form.Label>
-          <Form.Control type="text" placeholder="Raza de la mascota" defaultValue={paramsPacientes.razaMascota} ref={RazaMascotaRef} />
+          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Raza de la mascota" defaultValue={paramsPacientes.razaMascota} ref={RazaMascotaRef} />
         </Form.Group>
 
         {error === true ? (

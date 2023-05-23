@@ -15,7 +15,10 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 function AgregarTurno() {
+
+
   const [servicio, setServicio] = useState("");
   const [nombreDueño, setNombreDueño] = useState("");
   const [veterinarioNombre, setVeterinarioNombre] = useState("");
@@ -53,8 +56,7 @@ function AgregarTurno() {
       largoInput(servicio) &&
       largoInput(nombreDueño) &&
       largoInput(veterinarioNombre) &&
-      largoInput(especieMascota) &&
-      topePrecio(telefonoContacto)
+      largoInput(especieMascota) 
     ) {
       const nuevoTurno = {
         servicio,
@@ -112,12 +114,12 @@ function AgregarTurno() {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre del Dueño</Form.Label>
-          <Form.Control type="text" placeholder="Nombre del Dueño" onChange={(e) => setNombreDueño(e.target.value)} />
+          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Nombre del Dueño" onChange={(e) => setNombreDueño(e.target.value)} />
         </Form.Group>
         
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Telefono</Form.Label>
-          <Form.Control type="number" placeholder="Telefono" onChange={(e) => setTelefonoContacto(e.target.value)}/>
+          <Form.Control required minlength="9" maxlength="11" type="number" placeholder="Telefono" onChange={(e) => setTelefonoContacto(e.target.value)}/>
         </Form.Group>
 
         <Form.Group className="mb-3">
