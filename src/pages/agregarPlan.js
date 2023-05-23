@@ -86,6 +86,7 @@ function AgregarPlan() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Titulo del plan</Form.Label>
               <Form.Control
+              required minlength="9" maxlength="40"
                 type="text"
                 placeholder="Titulo"
                 onChange={(e) => setTituloPlan(e.target.value)}
@@ -95,6 +96,7 @@ function AgregarPlan() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Subtitulo del Plan</Form.Label>
               <Form.Control
+              required minlength="9" maxlength="40"
                 type="text"
                 placeholder="Subtitulo"
                 onChange={(e) => setSubtituloPlan(e.target.value)}
@@ -103,6 +105,7 @@ function AgregarPlan() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Imagen del plan</Form.Label>
               <Form.Control
+              required
                 type="url"
                 placeholder="URL de la imagen"
                 onChange={(e) => setImgPlan(e.target.value)}
@@ -111,6 +114,7 @@ function AgregarPlan() {
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Precio del plan</Form.Label>
               <Form.Control
+              required  minlength="1" maxlength="10"
                 type="namber"
                 placeholder="Precio"
                 onChange={(e) => setPrecioPlan(e.target.value)}
@@ -119,6 +123,7 @@ function AgregarPlan() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Descripcion del plan</Form.Label>
               <Form.Control
+              required minlength="5" maxlength="100"
                 as="textarea"
                 rows={3}
                 placeholder="Descripcion del Plan"

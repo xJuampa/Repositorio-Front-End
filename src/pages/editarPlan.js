@@ -98,6 +98,7 @@ function EditarPlan(){
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Titulo del plan</Form.Label>
               <Form.Control
+              required minlength="9" maxlength="40"
                 type="text"
                 placeholder="Titulo"
                 defaultValue={paramsPlan.tituloPlan}
@@ -108,6 +109,7 @@ function EditarPlan(){
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Subtitulo del Plan</Form.Label>
               <Form.Control
+              required minlength="9" maxlength="40"
                 type="text"
                 placeholder="Subtitulo"
                 defaultValue={paramsPlan.subtituloPlan}
@@ -126,6 +128,7 @@ function EditarPlan(){
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>Precio del plan</Form.Label>
               <Form.Control
+              required  minlength="1" maxlength="10"
                 type="namber"
                 placeholder="Precio"
                 defaultValue={paramsPlan.precioPlan}
@@ -135,6 +138,7 @@ function EditarPlan(){
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Descripcion del plan</Form.Label>
               <Form.Control
+              required minlength="5" maxlength="100"
                 as="textarea"
                 rows={3}
                 placeholder="Descripcion del Plan"
@@ -143,12 +147,11 @@ function EditarPlan(){
               />
             </Form.Group>
             <Form.Group className="mb-3">
-          <Form.Label>Estado del comentario</Form.Label>
+          <Form.Label>Estado del Plan</Form.Label>
           <Form.Select value={paramsPlanEstado} onChange={(e) => setParamsPlanEstado(e.target.value)}>
             <option value="">Seleccione una categoria</option>
             <option value="true">Activo</option>
             <option value="false">Inactivo</option>
-            
           </Form.Select>
         </Form.Group>
 

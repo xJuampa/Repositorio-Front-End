@@ -82,6 +82,7 @@ function AgregarProductos(){
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Nombre del producto</Form.Label>
             <Form.Control
+            required minlength="3" maxlength="15"
               type="text"
               placeholder="Nombre del Producto"
               onChange={(e) => setNombreProducto(e.target.value)}
@@ -90,6 +91,7 @@ function AgregarProductos(){
             <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Imagen del producto</Form.Label>
             <Form.Control
+            required
               type="url"
               placeholder="URL de la imagen"
               onChange={(e) => setImgProducto(e.target.value)}
@@ -98,6 +100,7 @@ function AgregarProductos(){
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Precio del producto</Form.Label>
             <Form.Control
+            required minlength="1" maxlength="10"
               type="namber"
               placeholder="Precio"
               onChange={(e) => setPrecioProducto(e.target.value)}
@@ -106,6 +109,7 @@ function AgregarProductos(){
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Descripcion del producto</Form.Label>
             <Form.Control
+            required minlength="5" maxlength="100"
               as="textarea"
                rows={3}
               placeholder="Descripcion de la imagen"
@@ -115,6 +119,7 @@ function AgregarProductos(){
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Marca del producto</Form.Label>
             <Form.Control
+            required minlength="2" maxlength="30"
               type="text"
               placeholder="Marca de la imagen"
               onChange={(e) => setMarcaProducto(e.target.value)}

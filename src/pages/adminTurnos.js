@@ -7,8 +7,12 @@ import NavegacionLateral from "../components/NavLateral";
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import ItemListaTurno from "../components/ItemListaTurnos";
+import { Logueo } from "../helpers/Validaciones";
 
 function TurnoAdmin () {
+  
+  Logueo()
+
     const [listaTurnos, setListaTurnos] = useState([]);
     const URL = "http://localhost:4003/admTurnos/" ;
 

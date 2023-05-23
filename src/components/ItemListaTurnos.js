@@ -51,9 +51,6 @@ function ItemListaTurno ({items, consultaApiTurnos}){
         <td>{items.servicio}</td>
         <td>{items.fechaYHora}</td>
         <td>{items.veterinarioNombre}</td>
-        <Link to={`/editarTurno/${items._id}`}  className="btn warning me-3">
-            Editar
-          </Link>
           <Link className="btn btn-danger" onClick={() => eliminarObjetos()} >
             Borrar
           </Link>

@@ -24,11 +24,9 @@ function AgregarPaciente() {
     if (
       largoInput(nombrePaciente) &&
       largoInput(apellidoPaciente) &&
-      emailValidation(emailPaciente) &&
       largoInput(nombreMascota) &&
       largoInput(especieMascota) &&
-      largoInput(razaMascota) &&
-      topePrecio(telefonoPaciente)
+      largoInput(razaMascota) 
     ) {
       const nuevoPaciente = {
         nombrePaciente,
@@ -86,23 +84,23 @@ function AgregarPaciente() {
       <Form onSubmit={handleSubmit} className="container">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre del Paciente</Form.Label>
-          <Form.Control type="text" placeholder="Nombre del Paciente" onChange={(e) => setNombrePaciente(e.target.value)} />
+          <Form.Control required minlength="3" maxlength="20" type="text" placeholder="Nombre del Paciente" onChange={(e) => setNombrePaciente(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Apellido del Paciente</Form.Label>
-          <Form.Control type="text" placeholder="Apellido del Paciente" onChange={(e) => setApellidoPaciente(e.target.value)}/>
+          <Form.Control required minlength="3" maxlength="20" type="text" placeholder="Apellido del Paciente" onChange={(e) => setApellidoPaciente(e.target.value)}/>
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group  className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email del Paciente</Form.Label>
-          <Form.Control type="email" placeholder="Email del Paciente" onChange={(e) => setEmailPaciente(e.target.value)} />
+          <Form.Control required minlength="9" maxlength="30" type="email" placeholder="Email del Paciente" onChange={(e) => setEmailPaciente(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Telefono</Form.Label>
-          <Form.Control type="number" placeholder="Telefono" onChange={(e) => setTelefonoPaciente(e.target.value)}/>
+          <Form.Control required minlength="9" maxlength="11" type="number" placeholder="Telefono" onChange={(e) => setTelefonoPaciente(e.target.value)}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Nombre de la mascota</Form.Label>
-          <Form.Control type="text" placeholder="Nombre de la mascota" onChange={(e) => setNombreMascota(e.target.value)}/>
+          <Form.Control required minlength="2" maxlength="15" type="text" placeholder="Nombre de la mascota" onChange={(e) => setNombreMascota(e.target.value)}/>
         </Form.Group>
         <Form.Group className="mb-3">
           <Form.Label>Especie de la mascota</Form.Label>
@@ -117,7 +115,7 @@ function AgregarPaciente() {
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Raza de la mascota</Form.Label>
-          <Form.Control type="text" placeholder="Raza de la mascota" onChange={(e) => setRazaMascota(e.target.value)} />
+          <Form.Control required minlength="2" maxlength="15" type="text" placeholder="Raza de la mascota" onChange={(e) => setRazaMascota(e.target.value)} />
         </Form.Group>
         
         {error === true ? (

@@ -4,9 +4,7 @@ import { useState, useEffect } from "react";
 import petshop from "../imagenes/petshop.png";
 import peluqueria from "../imagenes/peluqueria.png";
 import atencionmedica from "../imagenes/atencionmedica.png";
-import nutrique from "../imagenes/nutrique.png";
-import comedero from "../imagenes/comedero.png";
-import balanced from "../imagenes/balanced.png";
+import { Link } from "react-router-dom";
 
 function PagPrincipal() {
   const [listaProductos, setListaProductos] = useState([]);
@@ -53,6 +51,12 @@ function PagPrincipal() {
         <div className="textoPrimerDiv">
           <h1>Cuidamos de tu mascota</h1>
           <h2>Cuidamos de vos</h2>
+          <Link
+        to="/verPlanesPantalla"
+        className="btn btn-info d-flex m-2 justify-content-center"
+      >
+        Conose nuestros Planes!
+      </Link>
         </div>
       </div>
 
