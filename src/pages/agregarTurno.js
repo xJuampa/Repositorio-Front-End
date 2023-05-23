@@ -149,8 +149,9 @@ function AgregarTurno() {
           <Form.Label>Veterinario</Form.Label>
           <Form.Select onChange={(e) => setVeterinarioNombre(e.target.value)}>
             <option value="">Seleccione una categoria</option>
-            <option value="Juan Perez">Vet. Juan Perez</option>
-            <option value="Luis Aguirre">Vet. Luis Aguirre</option>
+            <option value="Susana Diaz">Vet. Susana Diaz</option>
+            <option value="Fabio Lopez">Vet. Fabio Lopez</option>
+            <option value="Marita Aguirre">Vet. Marita Aguirre</option>
           </Form.Select>
         </Form.Group>
 

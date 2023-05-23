@@ -100,14 +100,14 @@ const handleSubmit = async (e) => {
               <Form.Control
               required minlength="9" maxlength="11"
                 type="namber"
-                placeholder="+54 0381 "
+                placeholder="381 "
                 onChange={(e) => setTelefonoComentario(e.target.value)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Escriba aqui su comentario</Form.Label>
               <Form.Control
-              required minlength="5" maxlength="100"
+              required minlength="5" maxlength="300"
                 as="textarea"
                  rows={3}
                 placeholder="Escriba aqui su consulta"

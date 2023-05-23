@@ -106,7 +106,7 @@ const handleSubmit = async (e) => {
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Escriba aqui su consulta</Form.Label>
               <Form.Control
-              required minlength="6" maxlength="100"
+              required minlength="6" maxlength="300"
                 as="textarea"
                  rows={3}
                 placeholder="Escriba aqui su consulta"

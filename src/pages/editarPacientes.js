@@ -100,16 +100,16 @@ function EditarPaciente(){
       <div className="divForms">
           <Form className="container" onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Nombre del Paciente</Form.Label>
-          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Nombre del Paciente" defaultValue={paramsPacientes.nombrePaciente} ref={NombrePacienteRef} />
+          <Form.Label>Nombre del dueño</Form.Label>
+          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Nombre del dueño" defaultValue={paramsPacientes.nombrePaciente} ref={NombrePacienteRef} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Apellido del Paciente</Form.Label>
-          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Apellido del Paciente" defaultValue={paramsPacientes.apellidoPaciente} ref={ApellidoPacienteRef}/>
+          <Form.Label>Apellido del dueño</Form.Label>
+          <Form.Control required minlength="3" maxlength="15" type="text" placeholder="Apellido del dueño" defaultValue={paramsPacientes.apellidoPaciente} ref={ApellidoPacienteRef}/>
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email del Paciente</Form.Label>
-          <Form.Control required minlength="9" maxlength="30" type="email" placeholder="Email del Paciente" defaultValue={paramsPacientes.emailPaciente} ref={EmailPacienteRef} />
+          <Form.Label>Email del dueño</Form.Label>
+          <Form.Control required minlength="9" maxlength="30" type="email" placeholder="Email del dueño" defaultValue={paramsPacientes.emailPaciente} ref={EmailPacienteRef} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Telefono</Form.Label>

@@ -33,46 +33,39 @@ function PaginaAdmin() {
 
   return (
     <>
-    <div className="ColorFondoAdm"> 
-    <div className="ContenedorAdmin ">
-    <div className="moverBarraLateral" >
+    <div className="ColorFondoAdm">
+  <div className="ContenedorAdmin">
+    <div className="moverBarraLateral" style={{ order: 1, flexDirection: 'row' }}>
       <NavegacionLateral />
     </div>
-    <div className="moverLista">
-    <div className=" table-responsive Listado" >
-    <Link
-    to="/agregarPaciente"
-    className="btn btn-success d-flex m-5 justify-content-center">
-    Agregar Paciente
-  </Link>
-  <Table className="table table-striped">
-      
-      <thead>
-        <tr>
-          <th>Nombre del dueño</th>
-          <th>Email</th>
-          <th>Telefono</th>
-          <th>Mascota</th>
-          <th>Nombre mascota</th>
-          <th>Opciones</th>
-        </tr>
-      </thead>
-      {listaPacientes.map((items) => (
-        <ItemLista
-          consultaApiPacientes={consultaApiPacientes}
-          items={items}
-          key={items._id}
-        />
-      ))}
-    </Table>
-
+    <div className="moverLista" style={{ order: 2 }}>
+      <div className="table-responsive Listado">
+        <Link to="/agregarPaciente" className="btn btn-success d-flex justify-content-center m-5">
+          Agregar Paciente
+        </Link>
+        <Table className="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre del dueño</th>
+              <th>Email</th>
+              <th>Telefono</th>
+              <th>Mascota</th>
+              <th>Nombre mascota</th>
+              <th>Opciones</th>
+            </tr>
+          </thead>
+          {listaPacientes.map((items) => (
+            <ItemLista
+              consultaApiPacientes={consultaApiPacientes}
+              items={items}
+              key={items._id}
+            />
+          ))}
+        </Table>
+      </div>
     </div>
-    </div>
-    
-    </div>
-
-    
-    </div>
+  </div>
+</div>
   </>
     
   );

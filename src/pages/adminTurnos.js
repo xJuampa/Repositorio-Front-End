@@ -43,11 +43,11 @@ function TurnoAdmin () {
         <div className="ColorFondoAdm"> 
 
         <div className="ContenedorAdmin ">
-        <div className="moverBarraLateral" >
+        <div className="moverBarraLateral" style={{ order: 1, flexDirection: 'row' }} >
           <NavegacionLateral />
         </div>
-        <div className="moverLista">
-        <div className="Listado">
+        <div className="moverLista" style={{ order: 2 }}>
+        <div  className= "table-responsive Listado">
         <Link
         to="/agregarTurno"
         className="btn btn-success d-flex m-5 justify-content-center"

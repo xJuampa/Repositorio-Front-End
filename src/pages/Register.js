@@ -2,6 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [nombreUsuario, setNombreUsuario] = useState("");
@@ -9,6 +10,7 @@ function Register() {
   const [email, setEmail] = useState("");
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
+  const navegacion = useNavigate()
 
   const handleSubmitUsers = async (e) => {
     e.preventDefault();
@@ -31,6 +33,7 @@ function Register() {
       });
       if(respuesta.status===201){
         console.log("Usuario creado")
+        navegacion("/login")
       }else{
         console.log("Fallo el intento de creacion")
       }

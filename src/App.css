@@ -158,8 +158,13 @@ text-align: center;
   align-items: center;
   margin-left: 5%;
   justify-content: center;
-  color: rgb(63, 62, 62);
+  color: rgb(255, 252, 252);
+  
+}
+.estiloLetra{
 
+  font: size 30%;;
+  
 }
 .tamañoSection{
   width: 100%;
@@ -537,4 +542,27 @@ justify-content: center;
 
 .colorBtnPlan{
   color: palevioletred;
+}
+@media (max-width: 768px) {
+  .ContenedorAdmin {
+    flex-direction: column;
+  }
+
+  .moverBarraLateral {
+    order: 2;
+  }
+
+  .moverLista {
+    order: 1;
+  }
+  .contenedorLateral{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 187, 0);
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: auto;
+  
+  }
 }

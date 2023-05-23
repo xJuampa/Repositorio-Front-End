@@ -83,16 +83,16 @@ function AgregarPaciente() {
       <div className="divForms">
       <Form onSubmit={handleSubmit} className="container">
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Nombre del Paciente</Form.Label>
-          <Form.Control required minlength="3" maxlength="20" type="text" placeholder="Nombre del Paciente" onChange={(e) => setNombrePaciente(e.target.value)} />
+          <Form.Label>Nombre del dueño</Form.Label>
+          <Form.Control required minlength="3" maxlength="20" type="text" placeholder="Nombre del dueño" onChange={(e) => setNombrePaciente(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Apellido del Paciente</Form.Label>
-          <Form.Control required minlength="3" maxlength="20" type="text" placeholder="Apellido del Paciente" onChange={(e) => setApellidoPaciente(e.target.value)}/>
+          <Form.Label>Apellido del dueño</Form.Label>
+          <Form.Control required minlength="3" maxlength="20" type="text" placeholder="Apellido del dueño" onChange={(e) => setApellidoPaciente(e.target.value)}/>
         </Form.Group>
         <Form.Group  className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email del Paciente</Form.Label>
-          <Form.Control required minlength="9" maxlength="30" type="email" placeholder="Email del Paciente" onChange={(e) => setEmailPaciente(e.target.value)} />
+          <Form.Label>Email del dueño</Form.Label>
+          <Form.Control required minlength="9" maxlength="30" type="email" placeholder="Email del dueño" onChange={(e) => setEmailPaciente(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Telefono</Form.Label>

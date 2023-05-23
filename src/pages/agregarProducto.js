@@ -109,7 +109,7 @@ function AgregarProductos(){
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Descripcion del producto</Form.Label>
             <Form.Control
-            required minlength="5" maxlength="100"
+            required minlength="5" maxlength="300"
               as="textarea"
                rows={3}
               placeholder="Descripcion de la imagen"

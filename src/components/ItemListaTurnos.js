@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { IoMdCreate,IoMdTrash } from "react-icons/io";
 
 function ItemListaTurno ({items, consultaApiTurnos}){
 
@@ -46,14 +47,15 @@ function ItemListaTurno ({items, consultaApiTurnos}){
     return(
         <tbody>
       <tr >
-        <td>{items.nombreDueño}{items.telefonoContacto}</td>
+        <td>{items.nombreDueño}({items.telefonoContacto})</td>
         <td>{items.especieMascota}</td>
         <td>{items.servicio}</td>
         <td>{items.fechaYHora}</td>
         <td>{items.veterinarioNombre}</td>
-          <Link className="btn btn-danger" onClick={() => eliminarObjetos()} >
-            Borrar
-          </Link>
+        <Link className="btn btn-outline-danger m-1" onClick={eliminarObjetos
+        } ><IoMdTrash/>
+        
+        </Link>
       </tr>
       </tbody>
     )

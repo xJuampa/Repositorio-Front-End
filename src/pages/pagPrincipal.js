@@ -52,8 +52,8 @@ function PagPrincipal() {
     <>
       <div className="background">
         <div className="textoPrimerDiv">
-          <h1>Cuidamos de tu mascota</h1>
-          <h2>Cuidamos de vos</h2>
+          <h1 className="estiloLetra">Cuidamos de tu mascota</h1>
+          <h2 className="estiloLetra">Cuidamos de vos</h2>
           <Link
         to="/verPlanesPantalla"
         className="btn btn-info d-flex m-2 justify-content-center"
