@@ -55,13 +55,7 @@ function ColorSchemesExample() {
                   >
                     Iniciar sesión
                   </Button>
-                  <Button
-                    className="m-1"
-                    href="/register"
-                    variant="outline-light"
-                  >
-                    Registrarme
-                  </Button>
+                  
                 </>
               )}
               {Token && (

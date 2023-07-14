@@ -123,6 +123,9 @@ const handleSubmit = async (e) => {
             <Button variant="primary" type="submit">
               Enviar
             </Button>
+            <Button variant="dark" className="m-2" href="/">
+        ↩
+      </Button>
           </Form>
   
           </div>

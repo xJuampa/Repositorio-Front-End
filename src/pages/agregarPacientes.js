@@ -122,9 +122,15 @@ function AgregarPaciente() {
           <Alert variant="danger">Corrobore los datos ingresados</Alert>
         ) : null}
 
-        <Button variant="primary" type="submit">
+        <Button variant="success" type="submit">
           Enviar
         </Button>
+        <Button variant="primary" className="m-2" href="/Admin">
+        ↩
+      </Button>
+      <Button variant="danger" href="/agregarPaciente">
+        🗑
+      </Button>
       </Form>
 
       </div>

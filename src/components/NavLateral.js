@@ -6,6 +6,7 @@ import {
   IoMdHelp,
   IoIosPaper,
   IoMdChatbubbles,
+  IoIosAddCircle,
 } from "react-icons/io";
 
 function NavegacionLateral() {
@@ -16,6 +17,12 @@ function NavegacionLateral() {
             <IoIosContacts /> 
           </Link>
         </div>
+{/*         
+                  <div>
+          <Link to={`/register`} className="btn"title="Registrar">
+            <IoIosAddCircle/> 
+          </Link>
+        </div> */}
         <div>
           <Link to={`/AdminTurnos`} className="btn" title="Turnos">
             <IoIosCalendar />
