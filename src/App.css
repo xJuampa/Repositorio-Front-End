@@ -1,38 +1,565 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  /*------------------------------------NAVBAR---------------------------------------------------------------------*/
+  *{
+    margin: 0%;
+    padding: 0%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
   }
+  .background {
+  display: flex;
+  background-image: url(./imagenes/background.png);
+  height: 40%;
+ padding-top: 15%;
+ padding-bottom: 15%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+  .Navbar{
+    background-color:rgb(41, 40, 40);
+    position: sticky;
+    }
+  .nombreNav{
+    color: orange;
+    font-style: normal;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .nombreNav:hover{
+    color: rgb(255, 255, 255);
+  }
+  
+  .nombreNav span{
+    color: rgb(255, 255, 255);
+  }
+  .nombreNav span:hover{
+    color: orange;
+  }
+  .button-container {
+    margin-left: auto;
+  }
+
+
+  /*-----------------------------------------------FOOTER---------------------------------------------------------------------*/
+  .redesf{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .redesf a{
+    color: orange;
+    height: 50px;
+    width: 50px;
+    font-size: xx-large;
+  }
+  .redesf a:hover{
+    color: white;
+  }
+  .logoF{
+    height: 120px;
+    width: 150px;
+  
+  }
+  
+/* ------------------------------------------------------CSS ADMIN PACIENTES ------------------------------------- */
+ 
+.contenedorLateral{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 187, 0);
+  height: 100vh;
+  width: 30%;
+  padding: 30px;
+  margin-right: 10%;
+
+}
+.contenedorLateral .btn{
+color: white;
+align-items: center;
+margin-right:10px ;
+display: flex;
+flex-direction: column;
+border: 0ch;
+margin-top: 20px;
+margin-left: -15px;
+font-size: x-large;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+Table{
+  border-spacing: 0;
+  width: 100%;
+  text-align: center;
+  flex-flow: nowrap;
+  flex-wrap: wrap;
+}
+Table th{
+text-align: center;
+}
+.ContenedorAdmin{
+  display: flex;
+
+}
+.BotonEliminar{
+  background-color: red;
+  align-items: center;
+  display: flex;
+  border: 0ch;
+}
+.Listado{
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  height: 75%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 15px;
+  border-top: solid 7px rgb(41, 40, 40);
+}
+.moverLista{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.ColorFondoAdm{
+  background-color: white;
+}
+
+/* -------------------------------------- CSS ADMIN PRODUCTO------------------------------------------- */
+
+.tamañoImagenProducto{
+  width: 70px;
+}
+
+/* ------------------------------------- Formularios Pacientes y Prod---------------------------------*/
+
+.divForms{
+  background-color: rgb(168, 166, 166);
+  width: 70%;
+  margin: 40px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.divGeneral{
+  display: flex;
+  justify-content: center;
+}
+
+
+/* -----------------------------------------------CSS PagPrincipal---------------------------------- */
+
+.textoPrimerDiv{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 5%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 252, 252);
+  
+}
+.estiloLetra{
+
+  font: size 30%;;
+  
+}
+.tamañoSection{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tamañoServicios{
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  margin: 5px;
+  
+}
+.acomodarServicios{
+  display: flex;
+  justify-content: center;
+}
+.tarjetaServicios{
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+
+}
+.tarjetaServicios img{
+ height: 55px;
+ width: 55px;
+  
+}
+.servicios{
+  background-color: #464646;
+}
+.contenedorcards{
+  justify-content:space-evenly;
 }
 
-.App-link {
-  color: #61dafb;
+.TituloProducto{
+  text-align: center;
 }
+.TituloProducto h5{
+  font-weight: 400;
+}
+.TituloProducto h6{
+  font-weight: 100;
+}
+.estiloCards{
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border: solid 5px white;
+  margin-bottom: 40px;
+  margin-left: 1px;
+  height: 380px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+.estiloCards img{
+ width: 100%;
+ height: 70%;
+}
+.estiloCards h3{
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.estiloCards h5{
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #464646;
+}
+.estiloCards h6{
+ 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #464646;
+  padding-bottom: 15px;
+}
+.tamañoSection3{
+  background-image: url(./imagenes/fondocomentarios.png);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.acomodarTitulos{
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.acomodarTitulos h2{
+ font-weight: 400;
+ margin-top: 20px;
+}
+.titulocomentario{
+  font-weight: 400;
+}
+.comentario{
+  font-style: oblique;
+
+}
+.publicidad{
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width:1023px){
+  .publicidad{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+/* -------------------------------------CSS Cards ------------------------------------ */
+.ProductosDestacados{
+  justify-content: center;
+}
+.card {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  margin-top: 50px;
+  
+}
+
+.card.expanded {
+  height: auto;
+}
+
+.card-image {
+  text-align: center;
+}
+
+.card-image img {
+  width: 100%;
+  max-height: 200px;
+  
+  border-radius: 4px;
+}
+
+.card-header {
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.card-content {
+  display: none;
+  margin-top: 10px;
+}
+
+.card.expanded .card-content {
+  display: block;
+}
+.tamaño{
+  margin:40px
+
+}
+/* ---------------------------------Imagen Publicidad ----------------------------------- */
+.acomodarImagen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  size: 80%;
+  
+}
+.divComentarios{
+  display: flex;
+
+}
+/*--------------------perfiles acerca de nosotros---------------------------*/
+
+
+.about-page {
+  text-align: center;
+  padding: 40px;
+}
+
+.about-page h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.image-container {
+  
+  width: 100%;
+ 
+}
+
+.image-container img {
+  width: 100%;
+  height: 30%;
+  
+}
+.title_desc {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: center; 
+}
+
+
+
+.members-container {
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f7f7f7;
+}
+
+.member-card {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 240px;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.member-card h2 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+
+.member-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 30px;
+
+}
+
+.social-icons a {
+  margin: 20px;
+  color: orange;
+}
+
+.social-icons a:hover{
+  color: black;
+} 
+
+
+
+
+.member-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  width: 240px;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.member-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.member-card h2 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #333;
+}
+
+.member-card p {
+  font-size: 16px;
+  color: #666;
+}
+
+/*-------------- 404 ---------------*/
+
+.error-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+  overflow: hidden;
+}
+
+.error-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./imagenes/4042.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(70%);
+}
+
+.error-content {
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.error-image {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.error-title {
+  font-size: 36px;
+  color: #fff;
+}
+
+.error-message {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.error-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.error-button:hover {
+  background-color: #27ae60;
+}
+
+.fondoGralLoguin{
+  display: flex;
+  justify-content: center;
+  margin: 10%;
+}
+.Activa{
+  display: block;
+}
+.Inactiva{
+  display: block;
+}
+
+
+.colorBtnPlan{
+  color: palevioletred;
+}
+@media (max-width: 768px) {
+  .ContenedorAdmin {
+    flex-direction: column;
+  }
+
+  .moverBarraLateral {
+    order: 2;
+  }
+
+  .moverLista {
+    order: 1;
+  }
+  .contenedorLateral{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 187, 0);
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    padding: auto;
+  
   }
 }
