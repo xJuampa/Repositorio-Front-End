@@ -22,20 +22,19 @@ function EditarPlan(){
   const navegacion = useNavigate()
 
 
+  const getPlan = async () => {
+    try {
+      const respuesta = await fetch(URL);
+      const dato = await respuesta.json();
+      setParamsPlan(dato);
+      setParamsPlanEstado(dato.estadoPlan);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
   useEffect(() => {
-    const getPlan = async () => {
-      try {
-        const respuesta = await fetch(URL);
-        const dato = await respuesta.json();
-        setParamsPlan(dato);
-        setParamsPlanEstado(dato.estadoPlan);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    getPlan(); 
-
+    getPlan();
   }, [_id]);
 
         const handleSubmit= async(e)=>{

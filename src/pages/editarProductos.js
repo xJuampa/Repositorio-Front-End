@@ -21,19 +21,19 @@ function EditarProducto (){
   const navegacion = useNavigate()
 
 
+  const getPaciente = async () => {
+    try {
+      const respuesta = await fetch(URL);
+      const dato = await respuesta.json();
+      setParamsPacientes(dato);
+      setParamsMascotasCat(dato.especieMascota);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    const getProducto = async () => {
-      try {
-        const respuesta = await fetch(URL);
-        const dato = await respuesta.json();
-        setParamsProductos(dato);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    getProducto();
-
+    getPaciente();
   }, [_id]);
 
         const handleSubmit= async(e)=>{

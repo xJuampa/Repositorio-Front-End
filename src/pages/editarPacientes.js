@@ -22,21 +22,21 @@ function EditarPaciente(){
   const [error, setError] = useState(false);
   const navegacion = useNavigate()
 
+  const getPaciente = async () => {
+    try {
+      const respuesta = await fetch(URL);
+      const dato = await respuesta.json();
+      setParamsPacientes(dato);
+      setParamsMascotasCat(dato.especieMascota);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
-    const getPaciente = async () => {
-      try {
-        const respuesta = await fetch(URL);
-        const dato = await respuesta.json();
-        setParamsPacientes(dato);
-        setParamsMascotasCat(dato.especieMascota);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    getPaciente(); 
-
-  }, [_id]); 
+    getPaciente();
+  }, [_id]);
+  
     const handleSubmit= async(e)=>{
       e.preventDefault();
 
