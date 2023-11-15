@@ -1,11 +1,8 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import ItemListaPlanes from "../components/ItemListaPlanes";
 import NavegacionLateral from "../components/NavLateral";
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
 import { Logueo } from "../helpers/Validaciones";
 
 function AdminPlanes() {

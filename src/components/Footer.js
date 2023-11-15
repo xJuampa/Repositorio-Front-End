@@ -66,10 +66,10 @@ function Footer(){
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Seguinos en nuestras redes</h6>
             <div className='redesf'>
-                <a href='#'><SlSocialInstagram/></a>
-                <a href='#'><SlSocialLinkedin/></a>
-                <a href='#'><SlSocialFacebook/></a> 
-                <a href='#'><SlSocialTwitter/></a>
+                <a href='https://instagram.com/'><SlSocialInstagram/></a>
+                <a href='https://linkedin.com/'><SlSocialLinkedin/></a>
+                <a href='https://facebook.com/'><SlSocialFacebook/></a> 
+                <a href='https://twitter.com/'><SlSocialTwitter/></a>
             </div>
             <Nav.Link href="/agregarComentario">Dejanos tu comentario!</Nav.Link>
             </MDBCol>
