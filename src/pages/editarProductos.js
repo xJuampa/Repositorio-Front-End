@@ -28,8 +28,11 @@ function EditarProducto() {
   };
 
   useEffect(() => {
-    getProducto();
-  }, [_id]);
+    const fetchData = async () => {
+      await getProducto();
+    };
+    fetchData();
+  }, [getProducto, _id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

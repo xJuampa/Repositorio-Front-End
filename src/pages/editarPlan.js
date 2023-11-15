@@ -34,8 +34,11 @@ function EditarPlan(){
   };
   
   useEffect(() => {
-    getPlan();
-  }, [_id]);
+    const fetchData = async () => {
+      await getPlan();
+    };
+    fetchData();
+  }, [getPlan, _id]);
 
         const handleSubmit= async(e)=>{
             e.preventDefault();

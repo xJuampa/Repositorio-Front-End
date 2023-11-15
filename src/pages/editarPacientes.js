@@ -34,8 +34,11 @@ function EditarPaciente(){
   };
 
   useEffect(() => {
-    getPaciente();
-  }, [_id]);
+    const fetchData = async () => {
+      await getPaciente();
+    };
+    fetchData();
+  }, [getPaciente, _id]);
   
     const handleSubmit= async(e)=>{
       e.preventDefault();
