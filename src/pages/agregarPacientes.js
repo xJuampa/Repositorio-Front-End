@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import {largoInput,topePrecio,emailValidation} from "../helpers/Validaciones"
+import {largoInput} from "../helpers/Validaciones"
 import Swal from "sweetalert2";
 import { Logueo } from "../helpers/Validaciones";
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Alert from "react-bootstrap/Alert";
-import { largoInput, topePrecio} from "../helpers/Validaciones"
+import { largoInput} from "../helpers/Validaciones"
 import Swal from "sweetalert2";
 import {useNavigate } from "react-router-dom";
 
@@ -12,7 +12,7 @@ const [nombreComentario,setNombreComentario]= useState("")
 const [emailComentario,setEmailComentario]= useState("")
 const [telefonoComentario,setTelefonoComentario]= useState(0)
 const [descripcionComentario,setDescripcionComentario]= useState("")
-const [estadoComentario,setEstadoComentario]= useState(false)
+
 const [error, setError] = useState(false);
 const navegacion = useNavigate()
 
@@ -31,7 +31,7 @@ const handleSubmit = async (e) => {
         emailComentario,
         telefonoComentario,
         descripcionComentario,
-        estadoComentario
+        
       };
 
       try {

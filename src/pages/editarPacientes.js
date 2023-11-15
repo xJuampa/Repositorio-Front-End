@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import { Form, Button } from "react-bootstrap";
 import Alert from "react-bootstrap/Alert";
 import { useParams, useNavigate } from "react-router-dom";
-import { largoInput, topePrecio } from "../helpers/Validaciones";
+import { largoInput } from "../helpers/Validaciones";
 import Swal from "sweetalert2";
 import { Logueo } from "../helpers/Validaciones";
 

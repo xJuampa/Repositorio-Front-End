@@ -24,12 +24,12 @@ const Logueo =()=>{
 
 
 }
-const emailValidation=(dato)=>{
-    const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+const emailValidation = (dato) => {
+    const regex = /^(([^<>()[\].;:\s@"]+(\.[^<>()[\].;:\s@"]+)*)|(".+"))@(([^<>()[\].;:\s@"]+\.)+[^<>()[\].;:\s@"]{2,})$/i;
 
-    if(regex.test(dato)){
+    if (regex.test(dato)) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }

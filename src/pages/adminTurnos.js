@@ -2,10 +2,7 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import ItemListaProducto from "../components/ItemListaProducto";
 import NavegacionLateral from "../components/NavLateral";
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
 import ItemListaTurno from "../components/ItemListaTurnos";
 import { Logueo } from "../helpers/Validaciones";
 
