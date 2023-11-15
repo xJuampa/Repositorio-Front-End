@@ -22,7 +22,7 @@ function EditarPlan(){
   const navegacion = useNavigate()
 
 
-  const getPlan = async () => {
+  const getPlan = useCallback(async () => {
     try {
       const respuesta = await fetch(URL);
       const dato = await respuesta.json();
@@ -31,13 +31,10 @@ function EditarPlan(){
     } catch (error) {
       console.log(error);
     }
-  };
+  }, [setParamsPlan, setParamsPlanEstado, URL]);
   
   useEffect(() => {
-    const fetchData = async () => {
-      await getPlan();
-    };
-    fetchData();
+    getPlan();
   }, [getPlan, _id]);
 
         const handleSubmit= async(e)=>{

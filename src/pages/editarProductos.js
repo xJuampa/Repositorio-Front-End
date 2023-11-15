@@ -17,7 +17,7 @@ function EditarProducto() {
   const [error, setError] = useState(false);
   const navegacion = useNavigate();
 
-  const getProducto = async () => {
+  const getProducto = useCallback(async () => {
     try {
       const respuesta = await fetch(URL);
       const dato = await respuesta.json();
@@ -25,13 +25,10 @@ function EditarProducto() {
     } catch (error) {
       console.log(error);
     }
-  };
-
+  }, [setParamsProductos, URL]);
+  
   useEffect(() => {
-    const fetchData = async () => {
-      await getProducto();
-    };
-    fetchData();
+    getProducto();
   }, [getProducto, _id]);
 
   const handleSubmit = async (e) => {
