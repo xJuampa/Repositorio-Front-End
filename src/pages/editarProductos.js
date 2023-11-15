@@ -21,19 +21,20 @@ function EditarProducto (){
   const navegacion = useNavigate()
 
 
-    useEffect(() => {
-        getProducto();
-      }, [] );
-      
-        const getProducto= async()=>{
-          try {
-            const respuesta = await fetch(URL)
-            const dato = await respuesta.json()
-            setParamsProductos(dato)
-          } catch (error) {
-            console.log(error)
-          }
-        }
+  useEffect(() => {
+    const getProducto = async () => {
+      try {
+        const respuesta = await fetch(URL);
+        const dato = await respuesta.json();
+        setParamsProductos(dato);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getProducto();
+
+  }, [_id]);
 
         const handleSubmit= async(e)=>{
             e.preventDefault();
