@@ -1,27 +1,10 @@
-// import React from 'react';
 
-
-// function Comentarios({items}){
-//     return(
-//         <>
-//         <div className="tamañoComentario col-lg-5 col-sm-12">
-//             <div className='comentario'>
-//                 <h3>{items.nombreComentario}</h3>
-//                 <p>{items.descripcionComentario}</p>
-//             </div>
-//         </div>
-        
-//         </>
-
-//   );
-// }
 import React from 'react';
 import {
   MDBCard,
   MDBCardBody,
   MDBCardTitle,
-  MDBCardText,
-  MDBBtn
+  MDBCardText
 } from 'mdb-react-ui-kit';
 
 function Comentarios({items}){

@@ -5,8 +5,7 @@ import {
   IoIosCart,
   IoMdHelp,
   IoIosPaper,
-  IoMdChatbubbles,
-  IoIosAddCircle,
+  IoMdChatbubbles
 } from "react-icons/io";
 
 function NavegacionLateral() {
